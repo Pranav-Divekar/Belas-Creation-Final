@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Head from "next/head";
 import {
   Route,
   Clock,
@@ -265,6 +266,12 @@ export default function EVCyclePage() {
   }
 
   return (
+    <>
+    <Head>
+        <title>EV Cycle Advertising | Eco-Friendly, High-Impact Mobile Campaigns</title>
+        <meta name="description" content="Promote your brand with eco-friendly EV cycle advertising. Reach urban audiences with smart routing, real-time tracking, and high-impact campaigns in cities like Mumbai and Pune. Sustainable, innovative, and measurable outdoor advertising." />
+        <meta name="keywords" content="EV cycle advertising, electric cycle advertising, eco-friendly advertising, sustainable advertising, green advertising, mobile advertising, urban advertising, smart routing, AI-powered advertising, route optimization, high-traffic advertising, real-time tracking, campaign analytics, performance analytics, live location updates, coverage reports, carbon neutral advertising, zero emission advertising, sustainability reporting, green brand image, outdoor advertising, mobile billboard, city advertising, Mumbai advertising, Pune advertising, urban marketing, event promotion, festival advertising, university outreach, business district advertising, targeted advertising, brand visibility, high visibility campaigns, mobile campaigns, digital advertising, innovative advertising, advertising technology, advertising statistics, daily impressions, campaign management, advertising features, advertising benefits, advertising gallery, advertising service areas, advertising zones, active cycles, advertising reach, advertising coverage, advertising impact, advertising clients, advertising satisfaction, advertising results, advertising effectiveness, advertising performance, advertising solutions, advertising platform, advertising network, advertising strategy, advertising trends, advertising growth, advertising innovation, advertising engagement, advertising audience, advertising reach, advertising exposure, advertising impressions, advertising data, advertising insights, advertising reports, advertising measurement, advertising ROI, advertising metrics, advertising tools, advertising dashboard, advertising automation, advertising software, advertising apps, advertising vehicles, advertising fleets, advertising campaigns, advertising launches, advertising planning, advertising execution, advertising management, advertising optimization, advertising sustainability, advertising environment, advertising eco, advertising clean energy, advertising electric vehicles, advertising mobility, advertising smart cities, advertising urban mobility, advertising future, advertising India, advertising local, advertising regional" />
+      </Head>
     <div className="min-h-screen bg-white text-gray-900">
       {" "}
       {/* Added pt-20 for navbar spacing */}
@@ -885,6 +892,7 @@ export default function EVCyclePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

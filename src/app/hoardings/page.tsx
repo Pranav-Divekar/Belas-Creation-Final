@@ -5,6 +5,8 @@ import Link from "next/link";
 import locationData from "@/data/locations_billboard.json";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { useState, useEffect } from "react";
+import Head from "next/head";
+
 import {
   Search,
   Filter,
@@ -62,6 +64,18 @@ export default function LocationsPage() {
   };
 
   return (
+    <>
+    <Head>
+        <title>Discover Billboard Locations Across Cities | Find & Filter Outdoor Advertising Spots</title>
+        <meta
+          name="description"
+          content="Explore and filter premium billboard locations across major cities. Find the perfect outdoor advertising spot with detailed traffic data, pricing, and interactive search features for your next campaign."
+        />
+        <meta
+          name="keywords"
+          content="billboard locations, outdoor advertising, city billboards, advertising spots, billboard search, traffic data, billboard pricing, marketing, advertising campaign, location filtering, digital billboards, advertising boards, city advertising"
+        />
+      </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Stunning Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -725,5 +739,6 @@ export default function LocationsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

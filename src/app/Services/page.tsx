@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Head from "next/head"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -211,6 +211,25 @@ export default function ServicesPage() {
   }
 
   return (
+    <>
+    <Head>
+        <title>Digital Agency Services | Creative Marketing & Web Design Solutions</title>
+        <meta 
+          name="description" 
+          content="Full-service digital agency offering strategic marketing, innovative web design, and brand development solutions to grow your business online." 
+        />
+        <meta 
+          name="keywords" 
+          content="digital marketing, web design, social media management, branding, SEO services, content marketing, PPC advertising, conversion optimization, UX design, UI design, ecommerce development, mobile responsive design, graphic design, logo design, brand identity, marketing strategy, email marketing, influencer marketing, video production, animation services, WordPress development, Shopify development, website redesign, landing page design, digital transformation, growth hacking, analytics tracking, marketing automation, social media advertising, Google Ads, Facebook Ads, Instagram marketing, LinkedIn marketing, Twitter marketing, TikTok marketing, YouTube marketing, Pinterest marketing, SEO optimization, local SEO, technical SEO, on-page SEO, off-page SEO, link building, keyword research, Google Analytics, Google Tag Manager, heat mapping, A/B testing, conversion rate optimization, user experience design, information architecture, wireframing, prototyping, front-end development, back-end development, full-stack development, JavaScript development, React development, Node.js development, PHP development, WordPress customization, Shopify customization, Magento development, WooCommerce development, CMS development, website maintenance, website hosting, domain registration, SSL certificates, cybersecurity, data privacy, GDPR compliance, accessibility compliance, ADA compliant websites, voice search optimization, chatbot development, AI marketing, machine learning, data visualization, business intelligence, CRM integration, marketing technology, marketing consulting, digital strategy, competitive analysis, market research, customer journey mapping, persona development, content strategy, copywriting, technical writing, blogging, video scripting, podcast production, infographic design, illustration services, motion graphics, 3D modeling, virtual reality, augmented reality" 
+        />
+        <meta property="og:title" content="Digital Agency Services | Creative Marketing & Web Design Solutions" />
+        <meta property="og:description" content="Full-service digital agency offering strategic marketing, innovative web design, and brand development solutions to grow your business online." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://belascreation.com/Services" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Agency Services | Creative Marketing & Web Design Solutions" />
+        <meta name="twitter:description" content="Full-service digital agency offering strategic marketing, innovative web design, and brand development solutions to grow your business online." />
+      </Head>
     <div className={cn("bg-white text-gray-900 overflow-hidden", poppins.className)}>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white min-h-screen flex items-center">
@@ -714,5 +733,6 @@ export default function ServicesPage() {
         }
       `}</style>
     </div>
+    </>
   )
 }
