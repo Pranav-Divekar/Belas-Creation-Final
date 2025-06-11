@@ -46,6 +46,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; 
 import AnimatedCursor from "react-animated-cursor";
+import SplashCursor from '@/components/ui/splashCursor'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,7 +75,7 @@ export default function RootLayout({
           innerScale={0.8}
           outerScale={2.8}
           showSystemCursor={false}
-          hasBlendMode={true}
+          // hasBlendMode={true}
           outerStyle={{
             mixBlendMode: "exclusion", // creates a striking visual over light/dark
             backgroundColor: "rgba(255, 90, 0, 0.3)", // soft orange glow
@@ -94,6 +95,7 @@ export default function RootLayout({
             '[data-cursor="true"]',
           ]}
         />
+        <SplashCursor />
         <div className="relative w-full flex items-center justify-center">
           <Navbar />
         </div>

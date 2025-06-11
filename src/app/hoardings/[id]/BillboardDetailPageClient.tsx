@@ -18,10 +18,18 @@
 //   Target,
 //   Zap,
 //   ArrowRight,
+//   Globe,
+//   Ruler,
+//   Monitor,
+//   Move3D,
+//   Lightbulb,
+//   RotateCw,
+//   Sun,
+//   Moon,
+//   Cloud,
+//   CloudRain,
 // } from "lucide-react";
 // import { useState, useEffect, useRef } from "react";
-// import { ShineBorder } from "@/components/magicui/shine-border";
-
 // import {
 //   BarChart,
 //   Bar,
@@ -39,7 +47,6 @@
 //   Area,
 //   Legend,
 // } from "recharts";
-
 // interface Board {
 //   id: number;
 //   name: string;
@@ -87,6 +94,54 @@
 //     panorama: string | null;
 //   };
 // }
+
+// // interface Board {
+// //   id: number;
+// //   name: string;
+// //   location: {
+// //     city: string;
+// //     area: string;
+// //     address: string;
+// //     lat: number;
+// //     lng: number;
+// //     streetViewUrl: string;
+// //   };
+// //   specs: {
+// //     size: string;
+// //     type: string;
+// //     elevation: string;
+// //     lighting: string;
+// //     rotationInterval: string;
+// //     orientation: string;
+// //   };
+// //   metrics: {
+// //     footfall: {
+// //       daily: number;
+// //       weekly: number;
+// //       peakHours: string[];
+// //     };
+// //     impressions: {
+// //       daily: number;
+// //       monthly: number;
+// //       cpm: number;
+// //     };
+// //     visibility: {
+// //       day: {
+// //         distance: string;
+// //         obstructions: string;
+// //       };
+// //       night: {
+// //         distance: string;
+// //         illumination: string;
+// //       };
+// //       viewingAngles: number[];
+// //     };
+// //     media: {
+// //       images: string[];
+// //       panorama: string | null;
+// //     };
+// //   };
+// // }
 
 // interface BillboardDetailPageProps {
 //   params: {
@@ -274,83 +329,47 @@
 //   ];
 
 //   const visibilityData = [
-//     { name: "Excellent", value: 45, color: "#10b981" },
-//     { name: "Good", value: 35, color: "#3b82f6" },
-//     { name: "Fair", value: 20, color: "#f59e0b" },
+//     { name: "Clear Weather", value: 45, color: "#10b981", icon: Sun },
+//     { name: "Cloudy", value: 35, color: "#3b82f6", icon: Cloud },
+//     { name: "Rainy/Snow", value: 20, color: "#f59e0b", icon: CloudRain },
 //   ];
 
 //   const monthlyPerformanceData = [
 //     {
 //       month: "Jan",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 0.8),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           0.8 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 85,
 //     },
 //     {
 //       month: "Feb",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 0.9),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           0.9 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 88,
 //     },
 //     {
 //       month: "Mar",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 1.1),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           1.1 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 92,
 //     },
 //     {
 //       month: "Apr",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 1.2),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           1.2 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 95,
 //     },
 //     {
 //       month: "May",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 1.0),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           1.0 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 90,
 //     },
 //     {
 //       month: "Jun",
 //       impressions: Math.floor(board.metrics.impressions.monthly * 1.3),
-//       revenue: Math.floor(
-//         (board.metrics.impressions.monthly *
-//           1.3 *
-//           board.metrics.impressions.cpm) /
-//           1000,
-//       ),
 //       engagement: 98,
 //     },
 //   ];
 
 //   return (
-//     <div className="min-h-screen bg-gray-50">
-//       <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 opacity-30 z-0"></div>
+//     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+//       <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-200 opacity-30 z-0"></div>
 //       <style jsx>{`
 //         @keyframes fadeInUp {
 //           from {
@@ -556,11 +575,11 @@
 //           <div className="relative group">
 //             {/* Main Image Display */}
 //             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
-//               <ShineBorder />
 //               <img
 //                 src={
 //                   allImages[currentImageIndex] ||
-//                   "/placeholder.svg?height=500&width=800"
+//                   "/placeholder.svg?height=500&width=800" ||
+//                   "/placeholder.svg"
 //                 }
 //                 alt={`${board.name} view ${currentImageIndex + 1}`}
 //                 className="w-full h-full object-cover transition-all duration-500 hover:scale-105 cursor-pointer"
@@ -816,7 +835,7 @@
 //                   rel="noopener noreferrer"
 //                   className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-4 py-2 rounded-lg font-medium transition-colors text-sm hover:scale-105 transform duration-300 shadow-lg"
 //                 >
-//                   <span className="text-sm">🌐</span>
+//                   <Globe className="w-4 h-4" />
 //                   360° View
 //                 </a>
 //               </div>
@@ -837,7 +856,7 @@
 //                 </div>
 //                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors duration-300">
 //                   <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-//                     <span className="text-lg">🌐</span>
+//                     <Globe className="w-4 h-4" />
 //                     Area Information
 //                   </h4>
 //                   <p className="text-gray-600 mb-2">{board.location.area}</p>
@@ -1004,11 +1023,11 @@
 //                           />
 //                           <Line
 //                             type="monotone"
-//                             dataKey="revenue"
+//                             dataKey="engagement"
 //                             stroke="#ec4899"
 //                             strokeWidth={3}
 //                             dot={{ fill: "#ec4899", strokeWidth: 2, r: 4 }}
-//                             name="Revenue ($)"
+//                             name="Engagement (%)"
 //                             animationDuration={1500}
 //                           />
 //                         </LineChart>
@@ -1017,10 +1036,10 @@
 //                   </div>
 //                 </div>
 
-//                 {/* Visibility Analysis */}
+//                 {/* Weather-Based Visibility */}
 //                 <div className="bg-amber-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
 //                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
-//                     Visibility Analysis
+//                     Weather-Based Visibility
 //                   </h3>
 //                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 //                     <div className="h-64">
@@ -1059,10 +1078,10 @@
 //                           className="flex items-center justify-between"
 //                         >
 //                           <div className="flex items-center gap-3">
-//                             <div
-//                               className="w-4 h-4 rounded-full"
-//                               style={{ backgroundColor: item.color }}
-//                             ></div>
+//                             <item.icon
+//                               className="w-4 h-4"
+//                               style={{ color: item.color }}
+//                             />
 //                             <span className="text-gray-700 font-medium">
 //                               {item.name}
 //                             </span>
@@ -1098,37 +1117,37 @@
 //                     {
 //                       label: "Size",
 //                       value: board.specs.size,
-//                       icon: "📐",
+//                       icon: Ruler,
 //                       color: "bg-blue-50 border-blue-200",
 //                     },
 //                     {
 //                       label: "Type",
 //                       value: board.specs.type,
-//                       icon: "🖥️",
+//                       icon: Monitor,
 //                       color: "bg-green-50 border-green-200",
 //                     },
 //                     {
 //                       label: "Elevation",
 //                       value: board.specs.elevation,
-//                       icon: "📏",
+//                       icon: Move3D,
 //                       color: "bg-yellow-50 border-yellow-200",
 //                     },
 //                     {
 //                       label: "Lighting",
 //                       value: board.specs.lighting,
-//                       icon: "💡",
+//                       icon: Lightbulb,
 //                       color: "bg-purple-50 border-purple-200",
 //                     },
 //                     {
 //                       label: "Rotation",
 //                       value: board.specs.rotationInterval,
-//                       icon: "🔄",
+//                       icon: RotateCw,
 //                       color: "bg-pink-50 border-pink-200",
 //                     },
 //                     {
 //                       label: "Orientation",
 //                       value: board.specs.orientation,
-//                       icon: "🧭",
+//                       icon: Compass,
 //                       color: "bg-indigo-50 border-indigo-200",
 //                     },
 //                   ].map((spec, index) => (
@@ -1143,11 +1162,9 @@
 //                       onMouseLeave={() => setActiveSpec(null)}
 //                     >
 //                       <div className="flex items-center gap-3 mb-3">
-//                         <span
-//                           className={`text-2xl ${activeSpec === index ? "animate-pulse-slow" : ""}`}
-//                         >
-//                           {spec.icon}
-//                         </span>
+//                         <spec.icon
+//                           className={`w-6 h-6 text-gray-600 ${activeSpec === index ? "animate-pulse-slow" : ""}`}
+//                         />
 //                         <h3 className="font-semibold text-gray-900">
 //                           {spec.label}
 //                         </h3>
@@ -1212,7 +1229,7 @@
 //                   <div className="space-y-4">
 //                     <div className="bg-amber-50 rounded-xl p-4 border border-amber-100 hover:border-amber-300 transition-all duration-300 hover:shadow-md">
 //                       <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-//                         <span className="text-xl animate-pulse-slow">☀️</span>
+//                         <Sun className="w-5 h-5 text-amber-500 animate-pulse-slow" />
 //                         Day Visibility
 //                       </h3>
 //                       <div className="space-y-2">
@@ -1233,7 +1250,7 @@
 
 //                     <div className="bg-indigo-50 rounded-xl p-4 border border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
 //                       <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-//                         <span className="text-xl animate-pulse-slow">🌙</span>
+//                         <Moon className="w-5 h-5 text-indigo-500 animate-pulse-slow" />
 //                         Night Visibility
 //                       </h3>
 //                       <div className="space-y-2">
@@ -1304,7 +1321,7 @@
 //   );
 // }
 
-"use client";
+"use client"
 
 import {
   MapPin,
@@ -1334,8 +1351,8 @@ import {
   Moon,
   Cloud,
   CloudRain,
-} from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+} from "lucide-react"
+import { useState, useEffect, useRef } from "react"
 import {
   BarChart,
   Bar,
@@ -1352,53 +1369,53 @@ import {
   AreaChart,
   Area,
   Legend,
-} from "recharts";
+} from "recharts"
 interface Board {
-  id: number;
-  name: string;
+  id: number
+  name: string
   location: {
-    city: string;
-    area: string;
-    address: string;
-    lat: number;
-    lng: number;
-    streetViewUrl: string;
-  };
+    city: string
+    area: string
+    address: string
+    lat: number
+    lng: number
+    streetViewUrl: string
+  }
   specs: {
-    size: string;
-    type: string;
-    elevation: string;
-    lighting: string;
-    rotationInterval: string;
-    orientation: string;
-  };
+    size: string
+    type: string
+    elevation: string
+    lighting: string
+    rotationInterval: string
+    orientation: string
+  }
   metrics: {
     footfall: {
-      daily: number;
-      weekly: number;
-      peakHours: string[];
-    };
+      daily: number
+      weekly: number
+      peakHours: string[]
+    }
     impressions: {
-      daily: number;
-      monthly: number;
-      cpm: number;
-    };
+      daily: number
+      monthly: number
+      cpm: number
+    }
     visibility: {
       day: {
-        distance: string;
-        obstructions: string;
-      };
+        distance: string
+        obstructions: string
+      }
       night: {
-        distance: string;
-        illumination: string;
-      };
-      viewingAngles: number[];
-    };
-  };
+        distance: string
+        illumination: string
+      }
+      viewingAngles: number[]
+    }
+  }
   media: {
-    images: string[];
-    panorama: string | null;
-  };
+    images: string[]
+    panorama: string | null
+  }
 }
 
 // interface Board {
@@ -1451,31 +1468,28 @@ interface Board {
 
 interface BillboardDetailPageProps {
   params: {
-    id: string;
-  };
-  board: Board;
+    id: string
+  }
+  board: Board
 }
 
-export default function BillboardDetailPageClient({
-  params,
-  board,
-}: BillboardDetailPageProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImageIndex, setModalImageIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeChart, setActiveChart] = useState("weekly");
+export default function BillboardDetailPageClient({ params, board }: BillboardDetailPageProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalImageIndex, setModalImageIndex] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const [activeChart, setActiveChart] = useState("weekly")
   const [animatedValues, setAnimatedValues] = useState({
     dailyTraffic: 0,
     impressions: 0,
     cpm: 0,
-  });
-  const [mapHovered, setMapHovered] = useState(false);
-  const [activeSpec, setActiveSpec] = useState<number | null>(null);
-  const mapRef = useRef<HTMLDivElement>(null);
+  })
+  const [mapHovered, setMapHovered] = useState(false)
+  const [activeSpec, setActiveSpec] = useState<number | null>(null)
+  const mapRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true)
 
     // Animate counter values
     const timer = setTimeout(() => {
@@ -1483,32 +1497,32 @@ export default function BillboardDetailPageClient({
         dailyTraffic: board.metrics.footfall.daily,
         impressions: board.metrics.impressions.daily,
         cpm: board.metrics.impressions.cpm,
-      });
-    }, 500);
+      })
+    }, 500)
 
     // Add scroll animation for map
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("map-animated");
+            entry.target.classList.add("map-animated")
           }
-        });
+        })
       },
       { threshold: 0.2 },
-    );
+    )
 
     if (mapRef.current) {
-      observer.observe(mapRef.current);
+      observer.observe(mapRef.current)
     }
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer)
       if (mapRef.current) {
-        observer.unobserve(mapRef.current);
+        observer.unobserve(mapRef.current)
       }
-    };
-  }, [board]);
+    }
+  }, [board])
 
   if (!board) {
     return (
@@ -1517,110 +1531,76 @@ export default function BillboardDetailPageClient({
           <div className="w-24 h-24 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
             <Eye className="w-12 h-12 text-red-500" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            Billboard Not Found
-          </h1>
-          <p className="text-gray-600 mb-6">
-            The requested billboard details are not available.
-          </p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Billboard Not Found</h1>
+          <p className="text-gray-600 mb-6">The requested billboard details are not available.</p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
             View All Locations
           </button>
         </div>
       </div>
-    );
+    )
   }
 
-  const allImages = [...board.media.images];
+  const allImages = [...board.media.images]
   if (board.media.panorama) {
-    allImages.push(board.media.panorama);
+    allImages.push(board.media.panorama)
   }
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
-  };
+    setCurrentImageIndex((prev) => (prev + 1) % allImages.length)
+  }
 
   const prevImage = () => {
-    setCurrentImageIndex(
-      (prev) => (prev - 1 + allImages.length) % allImages.length,
-    );
-  };
+    setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)
+  }
 
   const openModal = (index: number) => {
-    setModalImageIndex(index);
-    setIsModalOpen(true);
-  };
+    setModalImageIndex(index)
+    setIsModalOpen(true)
+  }
 
   const closeModal = () => {
-    setIsModalOpen(false);
-  };
+    setIsModalOpen(false)
+  }
 
   // Dynamic chart data with real-time simulation
   const weeklyTrafficData = [
     {
       day: "Mon",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (0.8 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (0.8 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (0.8 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (0.8 + Math.random() * 0.1)),
     },
     {
       day: "Tue",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (0.9 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (0.9 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (0.9 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (0.9 + Math.random() * 0.1)),
     },
     {
       day: "Wed",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (1.1 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (1.1 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (1.1 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (1.1 + Math.random() * 0.1)),
     },
     {
       day: "Thu",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (1.2 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (1.2 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (1.2 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (1.2 + Math.random() * 0.1)),
     },
     {
       day: "Fri",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (1.4 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (1.4 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (1.4 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (1.4 + Math.random() * 0.1)),
     },
     {
       day: "Sat",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (1.6 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (1.6 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (1.6 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (1.6 + Math.random() * 0.1)),
     },
     {
       day: "Sun",
-      traffic: Math.floor(
-        board.metrics.footfall.daily * (1.3 + Math.random() * 0.1),
-      ),
-      impressions: Math.floor(
-        board.metrics.impressions.daily * (1.3 + Math.random() * 0.1),
-      ),
+      traffic: Math.floor(board.metrics.footfall.daily * (1.3 + Math.random() * 0.1)),
+      impressions: Math.floor(board.metrics.impressions.daily * (1.3 + Math.random() * 0.1)),
     },
-  ];
+  ]
 
   const hourlyTrafficData = [
     { hour: "6AM", traffic: Math.floor(board.metrics.footfall.daily * 0.02) },
@@ -1632,13 +1612,13 @@ export default function BillboardDetailPageClient({
     { hour: "6PM", traffic: Math.floor(board.metrics.footfall.daily * 0.22) },
     { hour: "8PM", traffic: Math.floor(board.metrics.footfall.daily * 0.08) },
     { hour: "10PM", traffic: Math.floor(board.metrics.footfall.daily * 0.02) },
-  ];
+  ]
 
   const visibilityData = [
     { name: "Clear Weather", value: 45, color: "#10b981", icon: Sun },
     { name: "Cloudy", value: 35, color: "#3b82f6", icon: Cloud },
     { name: "Rainy/Snow", value: 20, color: "#f59e0b", icon: CloudRain },
-  ];
+  ]
 
   const monthlyPerformanceData = [
     {
@@ -1671,7 +1651,7 @@ export default function BillboardDetailPageClient({
       impressions: Math.floor(board.metrics.impressions.monthly * 1.3),
       engagement: 98,
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -1840,9 +1820,7 @@ export default function BillboardDetailPageClient({
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center animate-pulse-slow">
                 <Eye className="w-6 h-6 text-blue-600" />
               </div>
-              <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">
-                Billboard Details
-              </span>
+              <span className="text-blue-600 font-semibold text-sm uppercase tracking-wide">Billboard Details</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight text-center">
               {board.name}
@@ -1867,9 +1845,7 @@ export default function BillboardDetailPageClient({
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center animate-float">
                 <Camera className="w-5 h-5 text-blue-600" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                Media Gallery
-              </h2>
+              <h2 className="text-2xl font-bold text-gray-900">Media Gallery</h2>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <span>
@@ -1885,6 +1861,7 @@ export default function BillboardDetailPageClient({
                 src={
                   allImages[currentImageIndex] ||
                   "/placeholder.svg?height=500&width=800" ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg"
                 }
                 alt={`${board.name} view ${currentImageIndex + 1}`}
@@ -1919,13 +1896,12 @@ export default function BillboardDetailPageClient({
               </button>
 
               {/* Image Type Badge */}
-              {currentImageIndex === allImages.length - 1 &&
-                board.media.panorama && (
-                  <div className="absolute bottom-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2 animate-pulse-slow">
-                    <span className="text-xs">360°</span>
-                    Panoramic View
-                  </div>
-                )}
+              {currentImageIndex === allImages.length - 1 && board.media.panorama && (
+                <div className="absolute bottom-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2 animate-pulse-slow">
+                  <span className="text-xs">360°</span>
+                  Panoramic View
+                </div>
+              )}
             </div>
 
             {/* Thumbnail Navigation */}
@@ -1978,20 +1954,13 @@ export default function BillboardDetailPageClient({
             {allImages.length > 1 && (
               <>
                 <button
-                  onClick={() =>
-                    setModalImageIndex(
-                      (prev) =>
-                        (prev - 1 + allImages.length) % allImages.length,
-                    )
-                  }
+                  onClick={() => setModalImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
-                  onClick={() =>
-                    setModalImageIndex((prev) => (prev + 1) % allImages.length)
-                  }
+                  onClick={() => setModalImageIndex((prev) => (prev + 1) % allImages.length)}
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -2014,16 +1983,12 @@ export default function BillboardDetailPageClient({
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
             <div className="flex items-center justify-between mb-4">
               <Users className="w-8 h-8 text-blue-600 group-hover:animate-pulse" />
-              <span className="text-gray-500 text-sm font-medium">
-                Daily Traffic
-              </span>
+              <span className="text-gray-500 text-sm font-medium">Daily Traffic</span>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-1 animate-count-up">
               {(animatedValues.dailyTraffic / 1000).toFixed(1)}K
             </div>
-            <div className="text-gray-500 text-sm">
-              {board.metrics.footfall.weekly.toLocaleString()} weekly
-            </div>
+            <div className="text-gray-500 text-sm">{board.metrics.footfall.weekly.toLocaleString()} weekly</div>
             <div className="mt-3 flex items-center text-green-600 text-sm">
               <TrendingUp className="w-4 h-4 mr-1" />
               +12% from last month
@@ -2033,16 +1998,12 @@ export default function BillboardDetailPageClient({
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
             <div className="flex items-center justify-between mb-4">
               <Eye className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
-              <span className="text-gray-500 text-sm font-medium">
-                Impressions
-              </span>
+              <span className="text-gray-500 text-sm font-medium">Impressions</span>
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-1 animate-count-up">
               {(animatedValues.impressions / 1000).toFixed(1)}K
             </div>
-            <div className="text-gray-500 text-sm">
-              ${animatedValues.cpm} CPM
-            </div>
+            <div className="text-gray-500 text-sm">${animatedValues.cpm} CPM</div>
             <div className="mt-3 flex items-center text-green-600 text-sm">
               <TrendingUp className="w-4 h-4 mr-1" />
               +8% from last month
@@ -2052,13 +2013,10 @@ export default function BillboardDetailPageClient({
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
             <div className="flex items-center justify-between mb-4">
               <Clock className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
-              <span className="text-gray-500 text-sm font-medium">
-                Peak Hours
-              </span>
+              <span className="text-gray-500 text-sm font-medium">Peak Hours</span>
             </div>
             <div className="text-2xl font-bold text-gray-900 mb-1">
-              {board.metrics.footfall.peakHours[0]} -{" "}
-              {board.metrics.footfall.peakHours[1]}
+              {board.metrics.footfall.peakHours[0]} - {board.metrics.footfall.peakHours[1]}
             </div>
             <div className="text-gray-500 text-sm">Highest traffic period</div>
             <div className="mt-3 flex items-center text-blue-600 text-sm">
@@ -2083,19 +2041,14 @@ export default function BillboardDetailPageClient({
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center animate-float">
                   <MapPin className="w-5 h-5 text-blue-600" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Location & Map
-                </h2>
+                <h2 className="text-2xl font-bold text-gray-900">Location & Map</h2>
               </div>
               <div className="flex items-center gap-2">
                 <div className="text-sm text-gray-500 flex items-center">
                   <span className="font-mono bg-gray-100 px-2 py-1 rounded text-xs mr-2">
-                    {board.location.lat.toFixed(4)},{" "}
-                    {board.location.lng.toFixed(4)}
+                    {board.location.lat.toFixed(4)}, {board.location.lng.toFixed(4)}
                   </span>
-                  <div
-                    className={`w-2 h-2 rounded-full bg-green-500 ${mapHovered ? "animate-pulse" : ""}`}
-                  ></div>
+                  <div className={`w-2 h-2 rounded-full bg-green-500 ${mapHovered ? "animate-pulse" : ""}`}></div>
                 </div>
               </div>
             </div>
@@ -2155,9 +2108,7 @@ export default function BillboardDetailPageClient({
                     <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
                     Address
                   </h3>
-                  <p className="text-gray-800 font-medium">
-                    {board.location.address}
-                  </p>
+                  <p className="text-gray-800 font-medium">{board.location.address}</p>
                   <p className="text-gray-600">{board.location.city}</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors duration-300">
@@ -2168,9 +2119,7 @@ export default function BillboardDetailPageClient({
                   <p className="text-gray-600 mb-2">{board.location.area}</p>
                   <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
                     <ArrowRight className="w-4 h-4" />
-                    <span className="text-sm font-medium">
-                      View area details
-                    </span>
+                    <span className="text-sm font-medium">View area details</span>
                   </div>
                 </div>
               </div>
@@ -2191,9 +2140,7 @@ export default function BillboardDetailPageClient({
                     <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center animate-rotate">
                       <BarChart3 className="w-5 h-5 text-blue-600" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">
-                      Performance Analytics
-                    </h2>
+                    <h2 className="text-2xl font-bold text-gray-900">Performance Analytics</h2>
                   </div>
                   <div className="flex gap-2">
                     <button
@@ -2224,18 +2171,13 @@ export default function BillboardDetailPageClient({
                   {/* Dynamic Chart Display */}
                   <div className="bg-blue-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300 hover:border-blue-300">
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                      {activeChart === "weekly"
-                        ? "Weekly Traffic & Impressions"
-                        : "Hourly Traffic Pattern"}
+                      {activeChart === "weekly" ? "Weekly Traffic & Impressions" : "Hourly Traffic Pattern"}
                     </h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         {activeChart === "weekly" ? (
                           <BarChart data={weeklyTrafficData}>
-                            <CartesianGrid
-                              strokeDasharray="3 3"
-                              stroke="#e2e8f0"
-                            />
+                            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                             <XAxis dataKey="day" stroke="#64748b" />
                             <YAxis stroke="#64748b" />
                             <Tooltip
@@ -2265,10 +2207,7 @@ export default function BillboardDetailPageClient({
                           </BarChart>
                         ) : (
                           <AreaChart data={hourlyTrafficData}>
-                            <CartesianGrid
-                              strokeDasharray="3 3"
-                              stroke="#e2e8f0"
-                            />
+                            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                             <XAxis dataKey="hour" stroke="#64748b" />
                             <YAxis stroke="#64748b" />
                             <Tooltip
@@ -2296,16 +2235,11 @@ export default function BillboardDetailPageClient({
 
                   {/* Monthly Performance Trend */}
                   <div className="bg-purple-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300 hover:border-purple-300">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                      Monthly Performance Trend
-                    </h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Performance Trend</h3>
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={monthlyPerformanceData}>
-                          <CartesianGrid
-                            strokeDasharray="3 3"
-                            stroke="#e2e8f0"
-                          />
+                          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                           <XAxis dataKey="month" stroke="#64748b" />
                           <YAxis stroke="#64748b" />
                           <Tooltip
@@ -2344,9 +2278,7 @@ export default function BillboardDetailPageClient({
 
                 {/* Weather-Based Visibility */}
                 <div className="bg-amber-50 rounded-xl p-6 border border-amber-100 hover:shadow-lg transition-all duration-300 hover:border-amber-300">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    Weather-Based Visibility
-                  </h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Weather-Based Visibility</h3>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
@@ -2379,22 +2311,12 @@ export default function BillboardDetailPageClient({
                     </div>
                     <div className="flex flex-col justify-center space-y-4">
                       {visibilityData.map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center justify-between"
-                        >
+                        <div key={index} className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <item.icon
-                              className="w-4 h-4"
-                              style={{ color: item.color }}
-                            />
-                            <span className="text-gray-700 font-medium">
-                              {item.name}
-                            </span>
+                            <item.icon className="w-4 h-4" style={{ color: item.color }} />
+                            <span className="text-gray-700 font-medium">{item.name}</span>
                           </div>
-                          <span className="text-gray-900 font-bold">
-                            {item.value}%
-                          </span>
+                          <span className="text-gray-900 font-bold">{item.value}%</span>
                         </div>
                       ))}
                     </div>
@@ -2412,9 +2334,7 @@ export default function BillboardDetailPageClient({
                   <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center animate-float">
                     <Compass className="w-5 h-5 text-purple-600" />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    Technical Specifications
-                  </h2>
+                  <h2 className="text-2xl font-bold text-gray-900">Technical Specifications</h2>
                 </div>
               </div>
               <div className="p-8">
@@ -2460,9 +2380,7 @@ export default function BillboardDetailPageClient({
                     <div
                       key={index}
                       className={`${spec.color} rounded-xl p-6 border hover:shadow-lg transition-all duration-300 hover:scale-105 ${
-                        activeSpec === index
-                          ? "ring-2 ring-offset-2 ring-blue-500"
-                          : ""
+                        activeSpec === index ? "ring-2 ring-offset-2 ring-blue-500" : ""
                       }`}
                       onMouseEnter={() => setActiveSpec(index)}
                       onMouseLeave={() => setActiveSpec(null)}
@@ -2471,9 +2389,7 @@ export default function BillboardDetailPageClient({
                         <spec.icon
                           className={`w-6 h-6 text-gray-600 ${activeSpec === index ? "animate-pulse-slow" : ""}`}
                         />
-                        <h3 className="font-semibold text-gray-900">
-                          {spec.label}
-                        </h3>
+                        <h3 className="font-semibold text-gray-900">{spec.label}</h3>
                       </div>
                       <p className="text-gray-700 font-medium">{spec.value}</p>
                     </div>
@@ -2494,9 +2410,7 @@ export default function BillboardDetailPageClient({
                   <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center animate-pulse-slow">
                     <Eye className="w-4 h-4 text-emerald-600" />
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900">
-                    Detailed Metrics
-                  </h2>
+                  <h2 className="text-xl font-bold text-gray-900">Detailed Metrics</h2>
                 </div>
               </div>
               <div className="p-6">
@@ -2510,9 +2424,7 @@ export default function BillboardDetailPageClient({
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Daily Average</span>
-                        <span className="font-bold text-gray-900">
-                          {board.metrics.footfall.daily.toLocaleString()}
-                        </span>
+                        <span className="font-bold text-gray-900">{board.metrics.footfall.daily.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Weekly Total</span>
@@ -2521,9 +2433,7 @@ export default function BillboardDetailPageClient({
                         </span>
                       </div>
                       <div className="pt-3 border-t border-blue-200">
-                        <span className="text-gray-600 text-sm">
-                          Peak Hours:{" "}
-                        </span>
+                        <span className="text-gray-600 text-sm">Peak Hours: </span>
                         <span className="font-semibold text-blue-700">
                           {board.metrics.footfall.peakHours.join(" - ")}
                         </span>
@@ -2541,15 +2451,11 @@ export default function BillboardDetailPageClient({
                       <div className="space-y-2">
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Distance</span>
-                          <span className="font-bold text-gray-900">
-                            {board.metrics.visibility.day.distance}
-                          </span>
+                          <span className="font-bold text-gray-900">{board.metrics.visibility.day.distance}</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Obstructions</span>
-                          <span className="font-medium text-gray-700">
-                            {board.metrics.visibility.day.obstructions}
-                          </span>
+                          <span className="font-medium text-gray-700">{board.metrics.visibility.day.obstructions}</span>
                         </div>
                       </div>
                     </div>
@@ -2562,9 +2468,7 @@ export default function BillboardDetailPageClient({
                       <div className="space-y-2">
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Distance</span>
-                          <span className="font-bold text-gray-900">
-                            {board.metrics.visibility.night.distance}
-                          </span>
+                          <span className="font-bold text-gray-900">{board.metrics.visibility.night.distance}</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Illumination</span>
@@ -2583,16 +2487,14 @@ export default function BillboardDetailPageClient({
                       Viewing Angles
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {board.metrics.visibility.viewingAngles.map(
-                        (angle, index) => (
-                          <span
-                            key={index}
-                            className="bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
-                          >
-                            {angle}°
-                          </span>
-                        ),
-                      )}
+                      {board.metrics.visibility.viewingAngles.map((angle, index) => (
+                        <span
+                          key={index}
+                          className="bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium border border-gray-300 hover:bg-gray-100 transition-colors hover:scale-110 transform duration-300"
+                        >
+                          {angle}°
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -2611,8 +2513,7 @@ export default function BillboardDetailPageClient({
                   <h2 className="text-xl font-bold">Ready to Book?</h2>
                 </div>
                 <p className="text-blue-100 mb-6">
-                  Secure this premium billboard location for your next
-                  advertising campaign.
+                  Secure this premium billboard location for your next advertising campaign.
                 </p>
                 <button className="w-full bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
                   <span>Book Now</span>
@@ -2624,5 +2525,5 @@ export default function BillboardDetailPageClient({
         </div>
       </div>
     </div>
-  );
+  )
 }

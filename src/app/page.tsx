@@ -7,10 +7,22 @@ import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CompanySlider from "@/components/ui/CompanySlider";
 import AnimatedCursor from "react-animated-cursor";
-
+import { SEO_KEYWORDS_STRING } from "@/constants/seoKeywords";
+import Head from "next/head";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black/[o.96] antialiased bg-grid-white/[0.2]">
+    <><Head >
+    <title>Belas Creations | Best Ad Agency in Pune, Maharashtra</title>
+    <meta
+      name="keywords"
+      content={SEO_KEYWORDS_STRING}
+    />
+    <meta
+      name="description"
+      content="Belas Creations is the best ad agency in Pune, Maharashtra, offering billboards, EV advertising, cycle ads, social media, and more."
+    />
+  </Head>
+     <main className="min-h-screen bg-black/[o.96] antialiased bg-grid-white/[0.2]">
       <AnimatedCursor
         innerSize={10}
         outerSize={35}
@@ -19,7 +31,7 @@ export default function Home() {
         innerScale={0.8}
         outerScale={2.8}
         showSystemCursor={false}
-        hasBlendMode={true}
+        // hasBlendMode={true}
         outerStyle={{
           mixBlendMode: "exclusion", // creates a striking visual over light/dark
           backgroundColor: "rgba(255, 90, 0, 0.3)", // soft orange glow
@@ -48,5 +60,7 @@ export default function Home() {
       {/* <Instructors /> */}
       <Footer />
     </main>
+    </>
+   
   );
 }

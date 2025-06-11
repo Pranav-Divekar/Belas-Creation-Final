@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -27,15 +29,49 @@ const poppins = Poppins({
   display: "swap",
 })
 
+// Define types for better type safety
+type VisibilityState = {
+  [key: string]: boolean
+}
+
+type MousePosition = {
+  x: number
+  y: number
+}
+
+type ServiceItem = {
+  title: string
+  description: string
+  icon: React.ElementType
+  features: string[]
+  color: string
+  bgColor: string
+  delay: string
+  stats: string
+}
+
+type ClientItem = {
+  name: string
+  logo: string
+}
+
+type ProcessStep = {
+  icon: React.ElementType
+  title: string
+  description: string
+  color: string
+  number: string
+}
+
 export default function ServicesPage() {
-  const [isVisible, setIsVisible] = useState({})
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const heroRef = useRef(null)
+  const [isVisible, setIsVisible] = useState<VisibilityState>({})
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 })
+  const heroRef = useRef<HTMLDivElement>(null)
   const [scrollY, setScrollY] = useState(0)
 
   // Track mouse position for parallax effects
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
@@ -62,7 +98,7 @@ export default function ServicesPage() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.target.id) {
             setIsVisible((prev) => ({ ...prev, [entry.target.id]: true }))
           }
         })
@@ -78,7 +114,7 @@ export default function ServicesPage() {
   }, [])
 
   // Services data
-  const services = [
+  const services: ServiceItem[] = [
     {
       title: "Digital Marketing",
       description: "Data-driven campaigns that deliver measurable ROI and exceptional brand experiences.",
@@ -122,7 +158,7 @@ export default function ServicesPage() {
   ]
 
   // Clients data
-  const clients = [
+  const clients: ClientItem[] = [
     { name: "Acme Inc", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Globex", logo: "/placeholder.svg?height=60&width=120" },
     { name: "Soylent Corp", logo: "/placeholder.svg?height=60&width=120" },
@@ -132,7 +168,7 @@ export default function ServicesPage() {
   ]
 
   // Process steps data
-  const processSteps = [
+  const processSteps: ProcessStep[] = [
     {
       icon: Target,
       title: "Discover",
@@ -167,8 +203,8 @@ export default function ServicesPage() {
 
   // Calculate parallax effect based on mouse position
   const getParallaxStyle = (depth = 30) => {
-    const centerX = window.innerWidth / 2
-    const centerY = window.innerHeight / 2
+    const centerX = typeof window !== "undefined" ? window.innerWidth / 2 : 0
+    const centerY = typeof window !== "undefined" ? window.innerHeight / 2 : 0
     const x = (mousePosition.x - centerX) / depth
     const y = (mousePosition.y - centerY) / depth
     return { transform: `translate(${x}px, ${y}px)` }
@@ -184,7 +220,7 @@ export default function ServicesPage() {
             className="absolute inset-0 grid grid-cols-6 grid-rows-6 gap-4 opacity-20"
             style={{
               transform: `translateZ(-100px) rotateX(${scrollY * 0.01}deg) rotateY(${
-                (mousePosition.x / window.innerWidth - 0.5) * 5
+                (mousePosition.x / (typeof window !== "undefined" ? window.innerWidth : 1) - 0.5) * 5
               }deg)`,
             }}
           >
@@ -325,9 +361,6 @@ export default function ServicesPage() {
       </section>
       {/* Services Section */}
       <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
-        {/* 3D Perspective Grid */}
-        
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <Badge
@@ -344,7 +377,22 @@ export default function ServicesPage() {
               Our Expertise
             </Badge>
 
-            
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-gray-900"
+              id="services-title"
+              data-animate="true"
+              style={{
+                opacity: isVisible["services-title"] ? 1 : 0,
+                transform: isVisible["services-title"] ? "translateY(0)" : "translateY(30px)",
+                transition: "all 0.7s ease-out 0.2s",
+              }}
+            >
+              Services That Drive
+              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent relative">
+                Growth & Innovation
+                <span className="absolute -inset-1 bg-gradient-to-r from-blue-600/10 to-violet-600/10 blur-xl rounded-lg -z-10"></span>
+              </span>
+            </h2>
 
             <p
               className="text-xl text-gray-600 max-w-2xl mx-auto"
@@ -444,7 +492,7 @@ export default function ServicesPage() {
                     <Button
                       className={`w-full bg-gradient-to-r ${service.color} hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 font-semibold text-white shadow-md`}
                     >
-                     <a href="/contact">Explore Service</a>
+                      <a href="/contact">Explore Service</a>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
                   </div>
@@ -551,7 +599,9 @@ export default function ServicesPage() {
                     <p className="text-gray-600">{step.description}</p>
 
                     <div className="mt-6 flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                      <span><a href="/contact">Learn more</a></span>
+                      <span>
+                        <a href="/contact">Learn more</a>
+                      </span>
                       <ChevronRight className="h-4 w-4 ml-1 group-hover:ml-2 transition-all duration-300" />
                     </div>
 
@@ -594,14 +644,14 @@ export default function ServicesPage() {
               Ready to Transform Your Digital Presence?
             </h2>
             <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed">
-              Let's collaborate to create experiences that captivate your audience and drive exceptional results.
+              Let&apos;s collaborate to create experiences that captivate your audience and drive exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="px-8 py-6 text-lg font-semibold bg-white text-blue-600 hover:bg-white/90 transition-all duration-300 transform hover:scale-105 hover:rotate-1 rounded-full shadow-lg hover:shadow-white/30"
               >
-                 <a href="/contact">Start Your Project</a>
+                <a href="/contact">Start Your Project</a>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               <Button

@@ -44,8 +44,8 @@ export default function HeroSection() {
           <div className="w-[45%] max-[768px]:w-full text-left space-y-8 relative z-10 pr-12 max-[768px]:pr-0">
             {/* HEADLINE */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-slate-900 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-600 to-indigo-600 bg-clip-text text-transparent">
+              <h1 className="inter text-5xl lg:text-6xl font-bold leading-tight text-slate-900 tracking-tight">
+                <span className="montserrat bg-gradient-to-r from-indigo-600 to-indigo-600 bg-clip-text text-transparent">
                   Belas <AuroraText>Creation</AuroraText>
                 </span>
               </h1>
