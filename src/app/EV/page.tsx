@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import serviceData from "@/data/evService.json"
 import Image from "next/image"
 import {
   Route,
@@ -49,30 +48,150 @@ const useCountUp = (end: number, duration = 2000) => {
   return { count, startAnimation }
 }
 
-// Animation keyframes for floating elements
+// Enhanced animation keyframes for 3D floating elements
 const floatAnimation = `
 @keyframes float {
-  0% { transform: translateY(0px) translateX(0px); }
-  25% { transform: translateY(-10px) translateX(5px); }
-  50% { transform: translateY(0px) translateX(10px); }
-  75% { transform: translateY(10px) translateX(5px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% { transform: translateY(0px) translateX(0px) rotateZ(0deg); }
+  25% { transform: translateY(-10px) translateX(5px) rotateZ(90deg); }
+  50% { transform: translateY(0px) translateX(10px) rotateZ(180deg); }
+  75% { transform: translateY(10px) translateX(5px) rotateZ(270deg); }
+  100% { transform: translateY(0px) translateX(0px) rotateZ(360deg); }
 }
 @keyframes float-slow {
-  0% { transform: translateY(0px) translateX(0px); }
-  25% { transform: translateY(-15px) translateX(10px); }
-  50% { transform: translateY(0px) translateX(20px); }
-  75% { transform: translateY(15px) translateX(10px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% { transform: translateY(0px) translateX(0px) rotateY(0deg) rotateX(0deg); }
+  25% { transform: translateY(-15px) translateX(10px) rotateY(90deg) rotateX(45deg); }
+  50% { transform: translateY(0px) translateX(20px) rotateY(180deg) rotateX(90deg); }
+  75% { transform: translateY(15px) translateX(10px) rotateY(270deg) rotateX(135deg); }
+  100% { transform: translateY(0px) translateX(0px) rotateY(360deg) rotateX(180deg); }
 }
 @keyframes float-reverse {
-  0% { transform: translateY(0px) translateX(0px); }
-  25% { transform: translateY(10px) translateX(-5px); }
-  50% { transform: translateY(0px) translateX(-10px); }
-  75% { transform: translateY(-10px) translateX(-5px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% { transform: translateY(0px) translateX(0px) rotateZ(0deg) scale(1); }
+  25% { transform: translateY(10px) translateX(-5px) rotateZ(-90deg) scale(1.1); }
+  50% { transform: translateY(0px) translateX(-10px) rotateZ(-180deg) scale(1); }
+  75% { transform: translateY(-10px) translateX(-5px) rotateZ(-270deg) scale(0.9); }
+  100% { transform: translateY(0px) translateX(0px) rotateZ(-360deg) scale(1); }
 }
+@keyframes float-3d {
+  0% { transform: translateY(0px) translateX(0px) translateZ(0px) rotateX(0deg) rotateY(0deg); }
+  25% { transform: translateY(-20px) translateX(15px) translateZ(10px) rotateX(45deg) rotateY(90deg); }
+  50% { transform: translateY(0px) translateX(30px) translateZ(0px) rotateX(90deg) rotateY(180deg); }
+  75% { transform: translateY(20px) translateX(15px) translateZ(-10px) rotateX(135deg) rotateY(270deg); }
+  100% { transform: translateY(0px) translateX(0px) translateZ(0px) rotateX(180deg) rotateY(360deg); }
+}
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+@keyframes orbit-reverse {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(150px) rotate(360deg); }
+}
+@keyframes pulse-3d {
+  0% { transform: scale3d(1, 1, 1) rotateY(0deg); }
+  50% { transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg); }
+  100% { transform: scale3d(1, 1, 1) rotateY(360deg); }
+}
+@keyframes wave {
+  0% { transform: translateY(0px) rotateX(0deg); }
+  25% { transform: translateY(-15px) rotateX(45deg); }
+  50% { transform: translateY(0px) rotateX(90deg); }
+  75% { transform: translateY(15px) rotateX(135deg); }
+  100% { transform: translateY(0px) rotateX(180deg); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
+.animate-float-3d { animation: float-3d 10s ease-in-out infinite; }
+.animate-orbit { animation: orbit 15s linear infinite; }
+.animate-orbit-reverse { animation: orbit-reverse 20s linear infinite; }
+.animate-pulse-3d { animation: pulse-3d 4s ease-in-out infinite; }
+.animate-wave { animation: wave 5s ease-in-out infinite; }
 `
+
+// Mock service data (replace with actual data import when available)
+const serviceData = {
+  serviceInfo: {
+    title: "EV Cycle Advertising",
+    subtitle: "Eco-friendly mobile advertising that reaches your audience",
+    description:
+      "Our electric cycle advertising platform combines sustainability with high visibility, delivering your message across urban areas with maximum impact.",
+    videoUrl: "https://example.com/videos/demo.mp4",
+    heroImage: "/placeholder.svg?height=400&width=800",
+  },
+  statistics: {
+    totalCycles: "500",
+    citiesCovered: 12,
+    dailyImpressions: 50000,
+    campaignsLaunched: 120,
+    clientSatisfaction: 98,
+  },
+  features: [
+    {
+      id: "feature1",
+      title: "Smart Routing",
+      description: "AI-powered route optimization to maximize visibility in high-traffic areas.",
+      icon: "route",
+      image: "/placeholder.svg?height=200&width=300",
+      benefits: ["Increased impressions", "Strategic coverage", "Time optimization"],
+    },
+    {
+      id: "feature2",
+      title: "Real-time Tracking",
+      description: "Monitor your campaign performance with our advanced tracking system.",
+      icon: "monitor",
+      image: "/placeholder.svg?height=200&width=300",
+      benefits: ["Live location updates", "Performance analytics", "Coverage reports"],
+    },
+    {
+      id: "feature3",
+      title: "Green Advertising",
+      description: "Eco-friendly advertising solution with zero carbon emissions.",
+      icon: "zap",
+      image: "/placeholder.svg?height=200&width=300",
+      benefits: ["Carbon neutral", "Sustainability reporting", "Green brand image"],
+    },
+  ],
+  gallery: [
+    {
+      id: "gallery1",
+      title: "Downtown Campaign",
+      description: "High visibility advertising in the business district",
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      id: "gallery2",
+      title: "Festival Promotion",
+      description: "Special event coverage with targeted routes",
+      image: "/placeholder.svg?height=500&width=800",
+    },
+    {
+      id: "gallery3",
+      title: "University Outreach",
+      description: "Connecting with the student demographic",
+      image: "/placeholder.svg?height=500&width=800",
+    },
+  ],
+  serviceAreas: [
+    {
+      id: "area1",
+      city: "Mumbai",
+      coverage: "85%",
+      activeCycles: 150,
+      dailyReach: 25000,
+      image: "/placeholder.svg?height=150&width=300",
+      zones: ["South Mumbai", "Bandra", "Andheri", "Powai"],
+    },
+    {
+      id: "area2",
+      city: "Pune",
+      coverage: "75%",
+      activeCycles: 120,
+      dailyReach: 18000,
+      image: "/placeholder.svg?height=150&width=300",
+      zones: ["Koregaon Park", "Viman Nagar", "Hinjewadi", "Kothrud"],
+    },
+  ],
+}
 
 export default function EVCyclePage() {
   const [activeFeature, setActiveFeature] = useState(0)
@@ -151,20 +270,35 @@ export default function EVCyclePage() {
       {/* Added pt-20 for navbar spacing */}
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 pt-[18vh]">
-        {/* Animated Background Elements */}
+        {/* Enhanced 3D Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Floating circles with different animations */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-pink-200/10 to-orange-200/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-emerald-200/15 to-teal-200/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          {/* Large floating gradient orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-200/20 via-purple-200/15 to-pink-200/10 rounded-full blur-3xl animate-pulse-3d"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-emerald-200/15 via-teal-200/10 to-cyan-200/20 rounded-full blur-3xl animate-float-3d delay-1000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-orange-200/10 via-red-200/15 to-rose-200/20 rounded-full blur-3xl animate-wave delay-2000"></div>
 
-          {/* Moving particles */}
-          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-blue-400/30 rounded-full animate-float"></div>
-          <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-purple-400/20 rounded-full animate-float-slow"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-5 h-5 bg-emerald-400/20 rounded-full animate-float-reverse"></div>
+          {/* 3D geometric shapes */}
+          <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-gradient-to-br from-blue-400/40 to-indigo-500/30 rounded-lg animate-float transform-gpu perspective-1000"></div>
+          <div className="absolute top-1/3 right-1/3 w-12 h-12 bg-gradient-to-br from-purple-400/30 to-pink-500/40 rounded-full animate-float-slow transform-gpu"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-br from-emerald-400/35 to-teal-500/25 rounded-lg animate-float-reverse transform-gpu"></div>
+          <div className="absolute top-1/2 left-1/6 w-10 h-10 bg-gradient-to-br from-orange-400/30 to-red-500/35 rounded-full animate-orbit transform-gpu"></div>
+          <div className="absolute bottom-1/3 right-1/6 w-14 h-14 bg-gradient-to-br from-cyan-400/25 to-blue-500/30 rounded-lg animate-orbit-reverse transform-gpu"></div>
 
-          {/* Gradient mesh background */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(220,230,255,0.15),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(220,240,255,0.1),transparent_70%)] pointer-events-none"></div>
+          {/* Floating particles with 3D effects */}
+          <div className="absolute top-20 right-40 w-3 h-3 bg-blue-400/40 rounded-full animate-float"></div>
+          <div className="absolute top-60 left-20 w-4 h-4 bg-purple-400/35 rounded-full animate-float-slow delay-500"></div>
+          <div className="absolute bottom-40 left-40 w-2 h-2 bg-emerald-400/45 rounded-full animate-float-reverse delay-1000"></div>
+          <div className="absolute bottom-60 right-60 w-5 h-5 bg-pink-400/30 rounded-full animate-wave delay-1500"></div>
+
+          {/* Enhanced gradient mesh background with multiple layers */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.15),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(147,51,234,0.1),transparent_70%),radial-gradient(ellipse_at_center,rgba(236,72,153,0.05),transparent_60%)] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(59,130,246,0.1),rgba(147,51,234,0.05),rgba(236,72,153,0.08),rgba(59,130,246,0.1))] pointer-events-none opacity-60"></div>
+
+          {/* Moving gradient waves */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blue-200/10 to-transparent transform -skew-y-12 animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-purple-200/10 to-transparent transform skew-y-12 animate-pulse delay-1000"></div>
+          </div>
         </div>
 
         {/* Hero Content */}
@@ -245,6 +379,9 @@ export default function EVCyclePage() {
                       "/placeholder.svg" ||
                       "/placeholder.svg" ||
                       "/placeholder.svg" ||
+                      "/placeholder.svg" ||
+                      "/placeholder.svg" ||
+                      "/placeholder.svg" ||
                       "/placeholder.svg"
                     }
                     alt="EV Cycle Hero"
@@ -279,8 +416,17 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* Statistics Section with Animated Numbers */}
-      <section id="statistics-section" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section
+        id="statistics-section"
+        className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/50 to-indigo-50/30 relative overflow-hidden"
+      >
+        {/* 3D Background elements for statistics */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-20 w-32 h-32 bg-gradient-to-br from-blue-300/20 to-indigo-400/15 rounded-full blur-2xl animate-float-slow"></div>
+          <div className="absolute bottom-10 right-20 w-40 h-40 bg-gradient-to-br from-purple-300/15 to-pink-400/20 rounded-full blur-2xl animate-float-reverse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-br from-emerald-300/10 to-teal-400/15 rounded-full blur-3xl animate-pulse-3d"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div className="text-center group hover:scale-110 transition-all duration-300 hover:bg-white hover:shadow-xl rounded-2xl p-6">
               <div className="text-4xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors duration-300">
@@ -316,8 +462,14 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* Gallery Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20 relative overflow-hidden">
+        {/* 3D Background elements for gallery */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 right-10 w-24 h-24 bg-gradient-to-br from-cyan-300/25 to-blue-400/20 rounded-lg animate-orbit transform-gpu"></div>
+          <div className="absolute bottom-20 left-10 w-36 h-36 bg-gradient-to-br from-rose-300/20 to-pink-400/25 rounded-full animate-float-3d"></div>
+          <div className="absolute top-1/3 left-1/3 w-20 h-20 bg-gradient-to-br from-violet-300/15 to-purple-400/20 rounded-lg animate-wave"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
               See It In Action
@@ -333,6 +485,8 @@ export default function EVCyclePage() {
                 src={
                   serviceData.gallery[currentGalleryImage].image ||
                   "/placeholder.svg?height=500&width=800" ||
+                  "/placeholder.svg" ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
@@ -384,8 +538,14 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* Maps & Route Planning Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-slate-50/80 to-zinc-50/60 relative overflow-hidden">
+        {/* 3D Background elements for maps section */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(99,102,241,0.1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.08),transparent_60%)]"></div>
+          <div className="absolute top-40 left-40 w-28 h-28 bg-gradient-to-br from-indigo-300/20 to-blue-400/25 rounded-full animate-orbit-reverse"></div>
+          <div className="absolute bottom-40 right-40 w-32 h-32 bg-gradient-to-br from-emerald-300/15 to-green-400/20 rounded-lg animate-float-3d"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
               Smart Route Planning
@@ -512,8 +672,14 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-white via-indigo-50/40 to-blue-50/30 relative overflow-hidden">
+        {/* 3D Background elements for features */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[conic-gradient(from_45deg_at_25%_25%,rgba(59,130,246,0.05),transparent_50%),conic-gradient(from_225deg_at_75%_75%,rgba(147,51,234,0.08),transparent_50%)]"></div>
+          <div className="absolute top-32 right-32 w-20 h-20 bg-gradient-to-br from-blue-300/30 to-cyan-400/25 rounded-full animate-pulse-3d"></div>
+          <div className="absolute bottom-32 left-32 w-24 h-24 bg-gradient-to-br from-purple-300/25 to-violet-400/30 rounded-lg animate-wave"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-indigo-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
               Advanced Features
@@ -564,8 +730,14 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* Service Areas */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/50 to-purple-50/30 relative overflow-hidden">
+        {/* 3D Background elements for service areas */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,rgba(236,72,153,0.08),transparent_60%),radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          <div className="absolute top-20 left-1/4 w-16 h-16 bg-gradient-to-br from-rose-300/25 to-pink-400/30 rounded-full animate-orbit"></div>
+          <div className="absolute bottom-20 right-1/4 w-28 h-28 bg-gradient-to-br from-teal-300/20 to-cyan-400/25 rounded-lg animate-float-reverse"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
@@ -673,8 +845,14 @@ export default function EVCyclePage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-br from-white via-slate-50/60 to-gray-50/80 relative overflow-hidden">
+        {/* 3D Background elements for CTA */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.1),transparent_70%),conic-gradient(from_0deg_at_50%_50%,rgba(147,51,234,0.05),rgba(59,130,246,0.08),rgba(236,72,153,0.06),rgba(147,51,234,0.05))]"></div>
+          <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-blue-300/25 to-indigo-400/30 rounded-full animate-float-3d"></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-purple-300/20 to-violet-400/25 rounded-lg animate-pulse-3d"></div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-gray-200 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
               Ready to Move Forward?
