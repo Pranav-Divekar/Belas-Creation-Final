@@ -256,24 +256,24 @@ function Footer() {
             <li className="flex items-start space-x-3">
               <MapPin className="text-blue-600 h-5 w-5 mt-0.5" />
               <span className="text-gray-600">
-                New Delhi, India
+              65/1 sector 25 Pradhikaran Nigdi Pune 411044
                 <br />
-                Delhi 110001
+                Maharashtra, India
               </span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="text-blue-600 h-5 w-5" />
               <a
-                href="mailto:info@belas.com"
+                href="mailto:advt.belascreation@gmail.com"
                 className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
               >
-                info@belas.com
+                advt.belascreation@gmail.com
               </a>
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="text-blue-600 h-5 w-5" />
               <a href="tel:+911234567890" className="text-gray-600 hover:text-blue-700 transition-colors duration-300">
-                +91 12345 67890
+              +91 98819 97770
               </a>
             </li>
           </ul>

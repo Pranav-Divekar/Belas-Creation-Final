@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "NextJS Bela's Creation ad agency Website with TailwindCSS and Typescript",
   icons: {
-    icon: "/favicon.png",
+    icon: "/logos/belas.png",
   },
 };
 
