@@ -474,7 +474,7 @@ export default function LocationsPage() {
             </div>
 
             {/* Enhanced Professional Analytics Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 pt-10 border-t border-slate-200/50">
+            {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 pt-10 border-t border-slate-200/50">
               <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-100/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-2xl mx-auto mb-5 flex items-center justify-center shadow-lg shadow-indigo-500/25 transition-all duration-300">
                   <Target className="w-8 h-8 text-white" />
@@ -534,7 +534,7 @@ export default function LocationsPage() {
                   Continuous exposure guarantee
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

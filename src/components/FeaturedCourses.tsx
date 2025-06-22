@@ -194,6 +194,8 @@
 // }
 
 // export default FeaturedCourses;
+
+
 "use client"
 import { BackgroundGradient } from "./ui/background-gradient"
 import CountUp from "./ui/countUp"
@@ -220,33 +222,17 @@ interface StatCardProps {
 function FeaturedCourses() {
   const stats: StatItem[] = [
     {
-      id: 1,
-      title: "Active Clients",
-      value: 150,
-      icon: Users,
-      suffix: "+",
-      description: "Satisfied businesses",
-    },
-    {
       id: 2,
       title: "Campaigns",
-      value: 500,
+      value: 1200,
       icon: Target,
       suffix: "+",
       description: "Successful launches",
     },
     {
-      id: 3,
-      title: "ROAS Average",
-      value: 4.2,
-      icon: TrendingUp,
-      suffix: "x",
-      description: "Return on ad spend",
-    },
-    {
       id: 4,
       title: "Years Experience",
-      value: 8,
+      value: 10,
       icon: Clock,
       suffix: "+",
       description: "Industry expertise",
@@ -254,42 +240,18 @@ function FeaturedCourses() {
     {
       id: 5,
       title: "Locations",
-      value: 15,
+      value: 50,
       icon: Globe,
       suffix: "+",
-      description: "Regions Covered",
-    },
-    {
-      id: 6,
-      title: "Revenue Growth",
-      value: 250,
-      icon: BarChart2,
-      suffix: "%",
-      description: "Average increase",
-    },
-    {
-      id: 7,
-      title: "Cost Savings",
-      value: 30,
-      icon: DollarSign,
-      suffix: "%",
-      description: "Reduced ad spend",
+      description: "Complete Maharashtra",
     },
     {
       id: 8,
       title: "Platforms",
-      value: 12,
+      value: 15,
       icon: Layers,
       suffix: "+",
       description: "Marketing channels",
-    },
-    {
-      id: 9,
-      title: "Conversion Rate",
-      value: 8.5,
-      icon: Monitor,
-      suffix: "%",
-      description: "Average improvement",
     },
     {
       id: 10,
@@ -297,7 +259,7 @@ function FeaturedCourses() {
       value: 1200,
       icon: Target,
       suffix: "+",
-      description: "Completed successfully",
+      description: "Successfully",
     },
   ]
 

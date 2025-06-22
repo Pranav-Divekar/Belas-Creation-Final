@@ -112,17 +112,32 @@ const floatAnimation = `
 // Mock service data (replace with actual data import when available)
 const serviceData = {
   serviceInfo: {
-    title: "EV Cycle Advertising",
+    title: "EV & Tricycle Cycle Advertising",
     subtitle: "Eco-friendly mobile advertising that reaches your audience",
     description:
       "Our electric cycle advertising platform combines sustainability with high visibility, delivering your message across urban areas with maximum impact.",
     videoUrl: "https://example.com/videos/demo.mp4",
-    heroImage: "/placeholder.svg?height=400&width=800",
+    heroImage: "/logos/ev1.jpeg",
+    galleryImages: [
+      "/logos/ev1.jpeg",
+      "/logos/tri1.jpeg",
+      "/logos/tri2.jpeg",
+      "/logos/tri3.jpeg",
+      "/logos/tri4.jpeg",
+      "/logos/tri5.jpeg",
+      "/logos/tri6.jpeg",
+      "/logos/tri7.jpeg",
+      "/logos/tri8.jpeg",
+      "/logos/tri9.jpeg",
+
+      "/logos/ev1.jpeg"
+      // Add more paths
+    ]
   },
   statistics: {
-    totalCycles: "500",
+    totalCycles: "30+",
     citiesCovered: 12,
-    dailyImpressions: 50000,
+    dailyImpressions: 20000,
     campaignsLaunched: 120,
     clientSatisfaction: 98,
   },
@@ -132,7 +147,7 @@ const serviceData = {
       title: "Smart Routing",
       description: "AI-powered route optimization to maximize visibility in high-traffic areas.",
       icon: "route",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/logos/tri1.jpeg",
       benefits: ["Increased impressions", "Strategic coverage", "Time optimization"],
     },
     {
@@ -140,7 +155,7 @@ const serviceData = {
       title: "Real-time Tracking",
       description: "Monitor your campaign performance with our advanced tracking system.",
       icon: "monitor",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/logos/ev1.jpeg",
       benefits: ["Live location updates", "Performance analytics", "Coverage reports"],
     },
     {
@@ -148,7 +163,7 @@ const serviceData = {
       title: "Green Advertising",
       description: "Eco-friendly advertising solution with zero carbon emissions.",
       icon: "zap",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/logos/tri5.jpeg",
       benefits: ["Carbon neutral", "Sustainability reporting", "Green brand image"],
     },
   ],
@@ -157,39 +172,53 @@ const serviceData = {
       id: "gallery1",
       title: "Downtown Campaign",
       description: "High visibility advertising in the business district",
-      image: "/placeholder.svg?height=500&width=800",
+      image: "/logos/ev1.jpeg",
     },
     {
       id: "gallery2",
       title: "Festival Promotion",
       description: "Special event coverage with targeted routes",
-      image: "/placeholder.svg?height=500&width=800",
+      image: "/logos/tri6.jpeg",
     },
     {
       id: "gallery3",
       title: "University Outreach",
       description: "Connecting with the student demographic",
-      image: "/placeholder.svg?height=500&width=800",
+      image: "/logos/tri7.jpeg",
     },
   ],
   serviceAreas: [
     {
       id: "area1",
-      city: "Mumbai",
-      coverage: "85%",
-      activeCycles: 150,
+      city: "Complete PCMC Covered",
+      coverage: "95%",
+      activeCycles: 30,
       dailyReach: 25000,
-      image: "/placeholder.svg?height=150&width=300",
-      zones: ["South Mumbai", "Bandra", "Andheri", "Powai"],
-    },
-    {
-      id: "area2",
-      city: "Pune",
-      coverage: "75%",
-      activeCycles: 120,
-      dailyReach: 18000,
-      image: "/placeholder.svg?height=150&width=300",
-      zones: ["Koregaon Park", "Viman Nagar", "Hinjewadi", "Kothrud"],
+      image: "/logos/pcmc.png",
+      zones: ["Nigdi",
+  "Pradhikaran",
+  "Akurdi",
+  "Pimpri",
+  "Chinchwad",
+  "Kasarwadi",
+  "Bhosari",
+  "Dapodi",
+  "Chikhali",
+  "Talawade",
+  "Moshi",
+  "Dehu Road",
+  "Ravet",
+  "Kiwale",
+  "Mamurdi",
+  "Wakad",
+  "Tathawade",
+  "Punawale",
+  "Pimple Gurav",
+  "Pimple Saudagar",
+  "Pimple Nilakh",
+  "Sangvi",
+  "Thergaon",
+  "Rahatani"],
     },
   ],
 }
@@ -268,8 +297,8 @@ export default function EVCyclePage() {
   return (
     <>
     <Head>
-        <title>EV Cycle Advertising | Eco-Friendly, High-Impact Mobile Campaigns</title>
-        <meta name="description" content="Promote your brand with eco-friendly EV cycle advertising. Reach urban audiences with smart routing, real-time tracking, and high-impact campaigns in cities like Mumbai and Pune. Sustainable, innovative, and measurable outdoor advertising." />
+        <title>EV & Tricycle Cycle Advertising | Eco-Friendly, High-Impact Mobile Campaigns</title>
+        <meta name="description" content="Promote your brand with eco-friendly EV cycle advertising. Reach urban audiences with smart routing, real-time tracking, and high-impact campaigns in areas like Mumbai and Pune. Sustainable, innovative, and measurable outdoor advertising." />
         <meta name="keywords" content="EV cycle advertising, electric cycle advertising, eco-friendly advertising, sustainable advertising, green advertising, mobile advertising, urban advertising, smart routing, AI-powered advertising, route optimization, high-traffic advertising, real-time tracking, campaign analytics, performance analytics, live location updates, coverage reports, carbon neutral advertising, zero emission advertising, sustainability reporting, green brand image, outdoor advertising, mobile billboard, city advertising, Mumbai advertising, Pune advertising, urban marketing, event promotion, festival advertising, university outreach, business district advertising, targeted advertising, brand visibility, high visibility campaigns, mobile campaigns, digital advertising, innovative advertising, advertising technology, advertising statistics, daily impressions, campaign management, advertising features, advertising benefits, advertising gallery, advertising service areas, advertising zones, active cycles, advertising reach, advertising coverage, advertising impact, advertising clients, advertising satisfaction, advertising results, advertising effectiveness, advertising performance, advertising solutions, advertising platform, advertising network, advertising strategy, advertising trends, advertising growth, advertising innovation, advertising engagement, advertising audience, advertising reach, advertising exposure, advertising impressions, advertising data, advertising insights, advertising reports, advertising measurement, advertising ROI, advertising metrics, advertising tools, advertising dashboard, advertising automation, advertising software, advertising apps, advertising vehicles, advertising fleets, advertising campaigns, advertising launches, advertising planning, advertising execution, advertising management, advertising optimization, advertising sustainability, advertising environment, advertising eco, advertising clean energy, advertising electric vehicles, advertising mobility, advertising smart cities, advertising urban mobility, advertising future, advertising India, advertising local, advertising regional" />
       </Head>
     <div className="min-h-screen bg-white text-gray-900">
@@ -330,82 +359,80 @@ export default function EVCyclePage() {
           </div>
 
           {/* Hero Image/Video Section */}
-          <div className="relative max-w-4xl mx-auto mb-12">
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 group">
-              {!isVideoPlaying && !showImageView ? (
-                <div className="relative h-64 md:h-96 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
-                  <div className="flex gap-4">
-                    <button
-                      onClick={() => setIsVideoPlaying(true)}
-                      className="group relative overflow-hidden flex items-center gap-4 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    >
-                      {/* Subtle hover effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <PlayCircle className="relative z-10 w-6 h-6 text-blue-600 group-hover:text-blue-700 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10 text-sm font-medium text-gray-800 group-hover:text-blue-700">
-                        Watch Demo
-                      </span>
-                    </button>
-                    <button
-                      onClick={() => setShowImageView(true)}
-                      className="group relative overflow-hidden flex items-center gap-4 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    >
-                      {/* Subtle hover effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <ImageIcon className="relative z-10 w-6 h-6 text-blue-600 group-hover:text-blue-700 group-hover:scale-110 transition-all duration-300" />
-                      <span className="relative z-10 text-sm font-medium text-gray-800 group-hover:text-blue-700">
-                        View Gallery
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              ) : isVideoPlaying ? (
-                <div className="relative">
-                  <video
-                    className="w-full h-64 md:h-96 object-cover"
-                    controls
-                    autoPlay
-                    src={serviceData.serviceInfo.videoUrl}
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <button
-                    onClick={() => setIsVideoPlaying(false)}
-                    className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-800 hover:bg-white transition-all duration-300 hover:scale-110"
-                  >
-                    Close
-                  </button>
-                </div>
-              ) : (
-                <div className="relative">
-                  <Image
-                    src={
-                      serviceData.serviceInfo.heroImage ||
-                      "/placeholder.svg?height=400&width=800" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg" ||
-                      "/placeholder.svg"
-                    }
-                    alt="EV Cycle Hero"
-                    width={800}
-                    height={400}
-                    className="w-full h-64 md:h-96 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <button
-                    onClick={() => setShowImageView(false)}
-                    className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-800 hover:bg-white transition-all duration-300 hover:scale-110"
-                  >
-                    Close
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
+          {/* Hero Section with Media Gallery and Demo Video */}
+<div className="relative max-w-4xl mx-auto mb-12">
+  {/* Always-visible Hero Image */}
+  <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 shadow-2xl">
+    <Image
+      src={serviceData.serviceInfo.heroImage || "/placeholder.svg"}
+      alt="EV Cycle Hero"
+      width={800}
+      height={400}
+      className="w-full h-64 md:h-96 object-cover"
+    />
+  </div>
+
+  {/* Action Buttons */}
+  <div className="mt-4 flex justify-center gap-4">
+    <button
+      onClick={() => setIsVideoPlaying(true)}
+      className="group relative overflow-hidden flex items-center gap-3 bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-xl"
+    >
+      <PlayCircle className="w-6 h-6 text-blue-600 group-hover:text-blue-700 group-hover:scale-110 transition-transform" />
+      <span className="text-sm font-medium text-gray-800 group-hover:text-blue-700">Watch Demo</span>
+    </button>
+
+    <button
+      onClick={() => setShowImageView(true)}
+      className="group relative overflow-hidden flex items-center gap-3 bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-md hover:shadow-xl"
+    >
+      <ImageIcon className="w-6 h-6 text-blue-600 group-hover:text-blue-700 group-hover:scale-110 transition-transform" />
+      <span className="text-sm font-medium text-gray-800 group-hover:text-blue-700">View Gallery</span>
+    </button>
+  </div>
+
+  {/* Video Modal */}
+  {isVideoPlaying && (
+    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4">
+      <div className="relative bg-white rounded-xl overflow-hidden max-w-3xl w-full">
+        <video className="w-full h-auto" controls autoPlay src={serviceData.serviceInfo.videoUrl}>
+          Your browser does not support the video tag.
+        </video>
+        <button
+          onClick={() => setIsVideoPlaying(false)}
+          className="absolute top-2 right-2 bg-white px-3 py-1 rounded-full text-sm font-semibold text-gray-800 hover:bg-gray-100 transition"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  )}
+
+  {/* Image Gallery View */}
+  {showImageView && (
+    <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+      {(serviceData.serviceInfo.galleryImages || []).map((imgSrc, idx) => (
+        <Image
+          key={idx}
+          src={imgSrc}
+          alt={`Gallery image ${idx + 1}`}
+          width={400}
+          height={300}
+          className="rounded-xl object-cover w-full h-48 shadow-md hover:scale-105 transition-transform duration-300"
+        />
+      ))}
+      <div className="col-span-full flex justify-end">
+        <button
+          onClick={() => setShowImageView(false)}
+          className="mt-2 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium text-gray-800 border hover:bg-white transition-all hover:scale-105"
+        >
+          Close Gallery
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
 
           {/* Enhanced CTA Button */}
           <div className="flex justify-center">
@@ -445,11 +472,11 @@ export default function EVCyclePage() {
               <div className="text-4xl font-bold text-indigo-600 mb-2 group-hover:text-indigo-700 transition-colors duration-300">
                 {citiesCoveredCount.count}+
               </div>
-              <div className="text-gray-600 group-hover:text-gray-700">Cities Covered</div>
+              <div className="text-gray-600 group-hover:text-gray-700">Areas Covered</div>
             </div>
             <div className="text-center group hover:scale-110 transition-all duration-300 hover:bg-white hover:shadow-xl rounded-2xl p-6">
               <div className="text-4xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors duration-300">
-                {dailyImpressionsCount.count}K+
+                {/* {dailyImpressionsCount.count}K+ */} Grabs Attention 
               </div>
               <div className="text-gray-600 group-hover:text-gray-700">Daily Impressions</div>
             </div>
@@ -463,7 +490,7 @@ export default function EVCyclePage() {
               <div className="text-4xl font-bold text-rose-600 mb-2 group-hover:text-rose-700 transition-colors duration-300">
                 {clientSatisfactionCount.count}%
               </div>
-              <div className="text-gray-600 group-hover:text-gray-700">Client Satisfaction</div>
+              <div className="text-gray-600 group-hover:text-gray-700">Attention Grabbing</div>
             </div>
           </div>
         </div>

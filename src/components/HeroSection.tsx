@@ -95,11 +95,15 @@ export default function HeroSection() {
             {/* CTA BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="/hoardings">
-                <InteractiveHoverButton>Hoardings</InteractiveHoverButton>
+                <InteractiveHoverButton>Hoardings & boards</InteractiveHoverButton>
               </a>
 
               <a href="/EV">
-                <InteractiveHoverButton>EV</InteractiveHoverButton>
+                <InteractiveHoverButton>EV & Tricycle</InteractiveHoverButton>
+              </a>
+
+              <a href="/Services">
+                <InteractiveHoverButton>Digital Marketing</InteractiveHoverButton>
               </a>
 
               <a href="/contact">

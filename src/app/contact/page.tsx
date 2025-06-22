@@ -618,7 +618,7 @@ Please let me know when we can schedule a consultation.`,
   }
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+15551234567"
+    window.location.href = "tel:+91 98819 97770"
   }
 
   const handleEmailClick = () => {
@@ -643,7 +643,7 @@ ${formData.message || "[Your message here]"}
 Best regards,
 ${formData.name || "[Your Name]"}`,
     )
-    window.location.href = `mailto:agency@example.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:advt.belascreation@gmail.com?subject=${subject}&body=${body}`
   }
 
   if (isSubmitted) {
@@ -1072,7 +1072,7 @@ ${formData.name || "[Your Name]"}`,
                 </div>
                 <div className="flex-1">
                   <h4 className="text-lg font-semibold text-gray-900">WhatsApp Chat</h4>
-                  <p className="text-sm text-gray-600">Start an instant conversation</p>
+                  <p className="text-sm text-gray-600">Start an instant conversation - +91 98819 97770</p>
                 </div>
                 <ArrowRightIcon className="w-5 h-5 text-gray-400 group-hover:text-green-500 group-hover:translate-x-1 transition-all duration-300" />
               </CardContent>
@@ -1088,7 +1088,7 @@ ${formData.name || "[Your Name]"}`,
                 </div>
                 <div className="flex-1">
                   <h4 className="text-lg font-semibold text-gray-900">Direct Call</h4>
-                  <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-sm text-gray-600">+91 98819 97770</p>
                 </div>
                 <ArrowRightIcon className="w-5 h-5 text-gray-400 group-hover:text-blue-500 group-hover:translate-x-1 transition-all duration-300" />
               </CardContent>
@@ -1104,7 +1104,7 @@ ${formData.name || "[Your Name]"}`,
                 </div>
                 <div className="flex-1">
                   <h4 className="text-lg font-semibold text-gray-900">Send Email</h4>
-                  <p className="text-sm text-gray-600">agency@example.com</p>
+                  <p className="text-sm text-gray-600">advt.belascreation@gmail.com</p>
                 </div>
                 <ArrowRightIcon className="w-5 h-5 text-gray-400 group-hover:text-red-500 group-hover:translate-x-1 transition-all duration-300" />
               </CardContent>
@@ -1121,11 +1121,11 @@ ${formData.name || "[Your Name]"}`,
                       <MapPinIcon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-900">Agency Headquarters</p>
+                      <p className="text-sm font-medium text-gray-900">Our office</p>
                       <p className="text-sm text-gray-600">
-                        123 Creative Avenue, Suite 101
+                      65/1 sector 25 Pradhikaran Nigdi Pune 411044
                         <br />
-                        New York, NY 10001
+                        Maharashtra, India
                       </p>
                     </div>
                   </div>
@@ -1137,9 +1137,9 @@ ${formData.name || "[Your Name]"}`,
                     <div>
                       <p className="text-sm font-medium text-gray-900">Business Hours</p>
                       <p className="text-sm text-gray-600">
-                        Monday - Friday: 9:00 AM - 6:00 PM
+                        Monday - Saturday: 9 am to 7 pm
                         <br />
-                        Saturday: By appointment only
+                        Sunday: By appointment only
                       </p>
                     </div>
                   </div>

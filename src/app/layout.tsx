@@ -53,7 +53,7 @@ export default function RootLayout({
             '[data-cursor="true"]',
           ]}
         />
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         <div className="relative w-full flex items-center justify-center">
           <Navbar />
         </div>
@@ -62,3 +62,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

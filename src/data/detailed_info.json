@@ -2,203 +2,434 @@
   "boards": [
     {
       "id": 1,
-      "name": "Times Square",
+      "name": "Dharmaraj Chowk - Ravet",
       "location": {
-        "city": "New York",
-        "area": "Times Square",
-        "address": "7th Ave & 47th St",
-        "lat": 40.7589,
-        "lng": -73.9851,
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Ravet",
+        "address": "Ravet Phata, Near Mukai Chowk, Pune - Nashik Highway",
+        "lat": 18.651809,
+        "lng": 73.752522,
         "streetViewUrl": "https://maps.app.goo.gl/T3iaexbAbjsuwLLC8"
       },
       "specs": {
         "size": "20ft x 40ft",
-        "type": "LED",
-        "elevation": "50ft",
-        "lighting": "Yes",
-        "rotationInterval": "N/A",
-        "orientation": "North"
-      },
-      "metrics": {
-        "footfall": {
-          "daily": 350000,
-          "weekly": 2450000,
-          "peakHours": ["5:00 PM", "7:00 PM"]
-        },
-        "impressions": {
-          "daily": 1000000,
-          "monthly": 30000000,
-          "cpm": 10.5
-        },
-        "visibility": {
-          "day": {
-            "distance": "500ft",
-            "obstructions": "None"
-          },
-          "night": {
-            "distance": "400ft",
-            "illumination": "High"
-          },
-          "viewingAngles": [30, 45, 60]
-        }
-      },
-      "media": {
-        "images": [
-          "/courses/beat-making.jpg",
-          "/courses/blues.jpg",
-          "/courses/jazz.jpg"
-        ],
-        "panorama": "/logos/belas.png"
-      }
-    },
-    {
-      "id": 2,
-      "name": "Sunset Boulevard Billboard",
-      "location": {
-        "city": "Los Angeles",
-        "area": "Hollywood",
-        "address": "Sunset Blvd & Vine St",
-        "lat": 18.6498202,
-        "lng": 73.761845,
-        "streetViewUrl": "https://maps.app.goo.gl/T3iaexbAbjsuwLLC8"
-      },
-      "specs": {
-        "size": "15ft x 30ft",
-        "type": "Static",
-        "elevation": "40ft",
-        "lighting": "Yes",
-        "rotationInterval": "N/A",
-        "orientation": "West"
-      },
-      "metrics": {
-        "footfall": {
-          "daily": 200000,
-          "weekly": 1400000,
-          "peakHours": ["6:00 PM", "8:00 PM"]
-        },
-        "impressions": {
-          "daily": 750000,
-          "monthly": 22500000,
-          "cpm": 8.0
-        },
-        "visibility": {
-          "day": {
-            "distance": "400ft",
-            "obstructions": "Trees"
-          },
-          "night": {
-            "distance": "300ft",
-            "illumination": "Medium"
-          },
-          "viewingAngles": [20, 35, 50]
-        }
-      },
-      "media": {
-        "images": ["/logos/belas.png", "/logos/belas.png"],
-        "panorama": null
-      }
-    },
-    {
-      "id": 3,
-      "name": "Piccadilly Circus Digital Board",
-      "location": {
-        "city": "London",
-        "area": "West End",
-        "address": "Piccadilly Circus, London",
-        "lat": 51.5098,
-        "lng": -0.1344,
-        "streetViewUrl": "https://maps.app.goo.gl/T3iaexbAbjsuwLLC8"
-      },
-      "specs": {
-        "size": "18ft x 35ft",
-        "type": "LED",
+        "type": "Board",
         "elevation": "45ft",
         "lighting": "Yes",
-        "rotationInterval": "10 seconds",
-        "orientation": "South"
+        "rotationInterval": "Static",
+        "orientation": "Facing East (toward Ravet Flyover)"
       },
       "metrics": {
         "footfall": {
-          "daily": 280000,
-          "weekly": 1960000,
-          "peakHours": ["7:00 PM", "9:00 PM"]
+          "daily": 85000,
+          "weekly": 595000,
+          "peakHours": ["8:00 AM", "6:30 PM"]
         },
         "impressions": {
-          "daily": 850000,
-          "monthly": 25500000,
-          "cpm": 12.0
+          "daily": 225000,
+          "monthly": 6750000,
+          "cpm": 6.75
         },
         "visibility": {
           "day": {
             "distance": "450ft",
-            "obstructions": "Minimal"
-          },
-          "night": {
-            "distance": "350ft",
-            "illumination": "High"
-          },
-          "viewingAngles": [25, 40, 55]
-        }
-      },
-      "media": {
-        "images": [
-          "/courses/classical-music.jpg",
-          "/courses/piano.jpg",
-          "/courses/jazz.jpg"
-        ],
-        "panorama": "/logos/belas.png"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Shibuya Crossing LED Display",
-      "location": {
-        "city": "Tokyo",
-        "area": "Shibuya",
-        "address": "Shibuya Crossing, Tokyo",
-        "lat": 35.6598,
-        "lng": 139.7006,
-        "streetViewUrl": "https://maps.app.goo.gl/T3iaexbAbjsuwLLC8"
-      },
-      "specs": {
-        "size": "25ft x 45ft",
-        "type": "LED",
-        "elevation": "60ft",
-        "lighting": "Yes",
-        "rotationInterval": "8 seconds",
-        "orientation": "East"
-      },
-      "metrics": {
-        "footfall": {
-          "daily": 500000,
-          "weekly": 3500000,
-          "peakHours": ["6:00 PM", "8:00 PM"]
-        },
-        "impressions": {
-          "daily": 1200000,
-          "monthly": 36000000,
-          "cpm": 9.5
-        },
-        "visibility": {
-          "day": {
-            "distance": "600ft",
             "obstructions": "None"
           },
           "night": {
-            "distance": "500ft",
-            "illumination": "Very High"
+            "distance": "400ft",
+            "illumination": "High (automated brightness)"
           },
-          "viewingAngles": [30, 45, 60, 75]
+          "viewingAngles": [0, 45, 90, 135, 180, 225, 270]
         }
       },
       "media": {
         "images": [
-          "/courses/edm.jpg",
-          "/courses/drumming.jpg",
-          "/courses/beat-making.jpg"
+          "/logos/dharmaraj-1.jpg",
+          "/logos/dharmaraj-2.jpg",
+          "/logos/dharmaraj-3.jpg",
+          "/logos/dharmaraj-4.jpg",
+          "/logos/dharmaraj-5.jpg",
+          "/logos/dharmaraj8.jpeg"
+          
         ],
         "panorama": "/logos/belas.png"
-      }
+      },
+      "insight": "This premium Board board at Ravet Phata delivers maximum exposure to commuters entering Pimpri-Chinchwad from the Pune-Nashik Highway. Its elevation and clear surroundings ensure visibility from almost all directions except the rear. With proximity to D.Y. Patil College and residential growth areas, the location has a strong brand recall impact."
+    },
+    {
+      "id": 2,
+      "name": "Kalewadi Phata",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Rahatani",
+        "address": "Kalewadi Phata, Near Rahatani Road, Wakad – Pimpri Connector",
+        "lat": 18.6039425,
+        "lng": 73.7799584,
+        "streetViewUrl": "https://www.google.com/maps/place/Kalewadi+Phata,+Gajanan+Nagar,+Sulabh+Colony,+Rahatani,+Pimpri-Chinchwad,+Maharashtra+411017/@18.6035616,73.7774426,3a,90y,178.55h,86.31t/data=!3m7!1e1!3m5!1s1MoiWAAGp0J8P3Q4wT31gw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.6899999999999977%26panoid%3D1MoiWAAGp0J8P3Q4wT31gw%26yaw%3D178.55!7i13312!8i6656"
+      },
+      "specs": {
+        "size": "20ft x 40ft",
+        "type": "Board",
+        "elevation": "42ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing North-East (toward Wakad Bridge)"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 82000,
+          "weekly": 574000,
+          "peakHours": ["9:00 AM", "7:00 PM"]
+        },
+        "impressions": {
+          "daily": 210000,
+          "monthly": 6300000,
+          "cpm": 6.3
+        },
+        "visibility": {
+          "day": {
+            "distance": "420ft",
+            "obstructions": "None"
+          },
+          "night": {
+            "distance": "370ft",
+            "illumination": "High (auto brightness adjustment)"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180, 225, 270]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/kalewadiPhata1.jpg",
+          "/logos/kalewadiPhata2.jpg",
+          "/logos/kalewadiPhata3.jpg",
+          "/logos/kalewadiPhata4.jpg",
+          "/logos/kalewadiPhata5.jpg",
+          "/logos/kalewadiPhata6.jpg"
+        ],
+        "panorama": "/logos/kalewadiPhata1.jpg"
+      },
+      "insight": "Kalewadi Phata is a prime advertising zone connecting the key areas of Rahatani, Pimpri, and Wakad. With high vehicular and residential footfall, this Board board ensures consistent engagement and brand exposure. It is surrounded by educational hubs like JSPM RSCOE, DY Patil Akurdi, and Symbiosis Skills University, making it an ideal spot for reaching both youth and working professionals. Exceptional daytime visibility and nighttime illumination add to its overall impact."
+    },    
+    {
+      "id": 3,
+      "name": "Jagtap Dairy Chowk - 1",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Jagtap Dairy",
+        "address": "Jagtap Dairy Chowk, Post Flyover Exit, Aundh-Wakad Road",
+        "lat": 18.5895617,
+        "lng": 73.7877698,
+        "streetViewUrl": "https://www.google.com/maps/place/Jagtap+Dairy+Travels+Stop+(After+Flyover)/@18.5923343,73.7852495,3a,75y,287.92h,95.08t/data=!3m7!1e1!3m5!1sV8sCmi_7LsPfAbmWa35B7A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-5.079999999999998%26panoid%3DV8sCmi_7LsPfAbmWa35B7A%26yaw%3D287.92!7i13312!8i6656"
+      },
+      "specs": {
+        "size": "24ft x 40ft",
+        "type": "Board",
+        "elevation": "48ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing North-West (toward Hinjawadi)"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 110000,
+          "weekly": 770000,
+          "peakHours": ["8:30 AM", "6:00 PM"]
+        },
+        "impressions": {
+          "daily": 285000,
+          "monthly": 8550000,
+          "cpm": 6.1
+        },
+        "visibility": {
+          "day": {
+            "distance": "480ft",
+            "obstructions": "Minor poles, no building blockages"
+          },
+          "night": {
+            "distance": "400ft",
+            "illumination": "High (optimized Board with ambient sensors)"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180, 225, 270]
+        }
+      },
+      "media": {
+        "images": [
+         "/logos/JagtapDairy1.jpg",
+         "/logos/JagtapDairy2.jpg",
+         "/logos/JagtapDairy3.jpg",
+         "/logos/JagtapDairy4.jpg"
+        ],
+        "panorama": "/logos/JagtapDairy1.jpg"
+      },
+      "insight": "Located at one of the busiest points connecting Aundh, Wakad, and Hinjawadi, this Board board at Jagtap Dairy Chowk offers unmatched visibility to IT professionals, college students, and local residents. With its elevated height and strategic orientation, the board captures high-speed vehicular traffic exiting the flyover. Surrounded by key institutions like Balaji Institute, JSPM Tathawade, and Indira College, the spot is ideal for campaigns targeting urban youth and professionals."
+    },    
+    {
+      "id": 4,
+      "name": "Jagtap Dairy Chowk - 2",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Kalewadi Phata Side",
+        "address": "Jagtap Dairy Signal, Kalewadi Phata Road, Pimpri-Chinchwad",
+        "lat": 18.6036928,
+        "lng": 73.7768066,
+        "streetViewUrl": "https://www.google.com/maps/place/Kalewadi+Phata/@18.6036928,73.7768066,3a,75y,19.09h,90.49t/data=!3m7!1e1!3m5!1sblzXmWJRtC4SW5lvpAV0jw!2e0"
+      },
+      "specs": {
+        "size": "20ft x 40ft",
+        "type": "Board",
+        "elevation": "43ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing South-East"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 90000,
+          "weekly": 630000,
+          "peakHours": ["9:00 AM", "6:30 PM"]
+        },
+        "impressions": {
+          "daily": 235000,
+          "monthly": 7050000,
+          "cpm": 6.2
+        },
+        "visibility": {
+          "day": {
+            "distance": "430ft",
+            "obstructions": "Minimal"
+          },
+          "night": {
+            "distance": "380ft",
+            "illumination": "Strong Board backlit"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180, 225]
+        }
+      },
+      "media": {
+        "images": [
+         "/logos/jagtap1-1.jpg",
+         "/logos/jagtap1-2.jpg",
+         "/logos/jagtap1-3.jpg"
+        ],
+        "panorama": "/logos/belas.png"
+      },
+      "insight": "Perfectly placed before the Jagtap Dairy flyover, this board captures audiences traveling from Kalewadi and Pimple Saudagar towards Wakad and Hinjawadi. Close to JSPM RSCOE and DY Patil Akurdi, the site consistently reaches office-goers, college students, and families in residential zones."
+    },
+    {
+      "id": 5,
+      "name": "Aundh - Sangvi Phata Road",
+      "location": {
+        "city": "Pune, MH",
+        "area": "Sangvi",
+        "address": "Sangvi Phata Road, near Old Sangvi-Aundh Connector",
+        "lat": 18.573762,
+        "lng": 73.8068871,
+        "streetViewUrl": "https://www.google.com/maps/place/Sangvi+phata+rd/@18.574143,73.8061373,3a,75y,224.8h,80.43t/data=!3m7!1e1!3m5!1s3ncTLMie3P87UDMFM5W3Ag!2e0"
+      },
+      "specs": {
+        "size": "22ft x 40ft",
+        "type": "Board",
+        "elevation": "47ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing South toward Aundh"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 98000,
+          "weekly": 686000,
+          "peakHours": ["8:00 AM", "7:00 PM"]
+        },
+        "impressions": {
+          "daily": 245000,
+          "monthly": 7350000,
+          "cpm": 6.8
+        },
+        "visibility": {
+          "day": {
+            "distance": "450ft",
+            "obstructions": "No frontal blockage"
+          },
+          "night": {
+            "distance": "390ft",
+            "illumination": "High-powered Board"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180, 225, 270]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/SangviP1.jpg",
+          "/logos/SangviP2.jpg",
+          "/logos/SangviP3.jpg",
+          "/logos/SangviP4.jpg",
+          "/logos/SangviP5.jpg",
+          "/logos/SangviP6.jpg"
+        ],
+        "panorama": "/logos/SangviP1.jpg"
+      },
+      "insight": "Sangvi Phata Road is a crucial connector between Aundh and Pimple Gurav, serving thousands of daily commuters. With nearby institutions like COEP Tech, Modern College, and SPPU, this board offers brand visibility to both student and professional audiences throughout the day."
+    },
+    {
+      "id": 6,
+      "name": "Appughar & Durga Tekdi Parking",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Nigdi",
+        "address": "Durga Tekdi Road, near Appughar Entry Gate",
+        "lat": 18.6660087,
+        "lng": 73.7617897,
+        "streetViewUrl": "https://www.google.com/maps/@18.6660087,73.7617897,3a,75y,268.76h,86.59t/data=!3m7!1e1!3m5!1s3dL7l5DDNuzt0wFiDYaxUA!2e0"
+      },
+      "specs": {
+        "size": "18ft x 36ft",
+        "type": "Board",
+        "elevation": "40ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing East toward Bhakti Shakti"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 68000,
+          "weekly": 476000,
+          "peakHours": ["7:30 AM", "6:00 PM"]
+        },
+        "impressions": {
+          "daily": 165000,
+          "monthly": 4950000,
+          "cpm": 5.9
+        },
+        "visibility": {
+          "day": {
+            "distance": "400ft",
+            "obstructions": "Minimal (open road stretch)"
+          },
+          "night": {
+            "distance": "350ft",
+            "illumination": "Bright Board with automatic dimming"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180]
+        }
+      },
+      "media": {
+        "images": [
+         "/logos/appghar1.jpeg",
+         "/logos/appgha2.jpeg",
+         "/logos/appghar3.jpeg"
+
+        ],
+        "panorama": "/logos/appghar1.jpeg"
+      },
+      "insight": "Surrounded by greenery and public spots, this location near Durga Tekdi and Appughar draws attention from tourists, joggers, and daily commuters. With visibility from Bhakti Shakti to Nigdi and nearby colleges like DY Patil and Indira, it’s a great mix of leisure and residential impressions."
+    },
+    {
+      "id": 7,
+      "name": "Bhakti Shakti Bus Stop",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Nigdi Pradhikaran",
+        "address": "Bhakti Shakti Chowk Bus Stop, Nigdi, Near Mumbai Highway",
+        "lat": 18.6652116,
+        "lng": 73.772098,
+        "streetViewUrl": "https://www.google.com/maps/@18.6652116,73.772098,3a,75y,346.42h,94.01t/data=!3m7!1e1!3m5!1s6OmmVe9vilUvsunWtTr1jA!2e0"
+      },
+      "specs": {
+        "size": "25ft x 50ft",
+        "type": "Board",
+        "elevation": "50ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing South-East toward Akurdi"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 120000,
+          "weekly": 840000,
+          "peakHours": ["9:00 AM", "6:30 PM"]
+        },
+        "impressions": {
+          "daily": 300000,
+          "monthly": 9000000,
+          "cpm": 5.8
+        },
+        "visibility": {
+          "day": {
+            "distance": "500ft",
+            "obstructions": "None"
+          },
+          "night": {
+            "distance": "420ft",
+            "illumination": "Very High (transit optimized)"
+          },
+          "viewingAngles": [0, 45, 90, 135, 180, 225, 270]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/bhaktishakti1.jpeg",
+          "/logos/bhaktishakti2.jpeg",
+          "/logos/bhaktishakti3.jpeg"
+        ],
+        "panorama":  "/logos/bhaktishakti2.jpeg"
+      },
+      "insight": "This board is placed at one of the highest footfall locations in Nigdi—Bhakti Shakti Bus Stop. With constant flow from city buses, express routes, and nearby students from PCCOE and DY Patil, this site ensures maximum exposure throughout the day. Ideal for transit advertising targeting mass urban audiences."
+    },
+    {
+      "id": 8,
+      "name": "Bird Valley Garden - Spine Road",
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Pradhikaran",
+        "address": "Bird Valley Udyan, Near Spine Road, Sector 8, Pradhikaran, Pune 411044",
+        "lat": 18.6571491,
+        "lng": 73.8003725,
+        "streetViewUrl": "https://www.google.com/maps/place/Bird+Valley+Udyan/@18.6568776,73.8001341,3a,75y,67.72h,86t/data=!3m7!1e1!3m5!1skHWu_DCVj7oUO7SnExvpLA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.9981497025046338%26panoid%3DkHWu_DCVj7oUO7SnExvpLA%26yaw%3D67.72259390949458!7i13312!8i6656"
+      },
+      "specs": {
+        "size": "20ft x 40ft",
+        "type": "LED Board",
+        "elevation": "42ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing North-East toward Spine Road Junction"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 87000,
+          "weekly": 609000,
+          "peakHours": ["7:30 AM", "6:00 PM"]
+        },
+        "impressions": {
+          "daily": 240000,
+          "monthly": 7200000,
+          "cpm": 4.7
+        },
+        "visibility": {
+          "day": {
+            "distance": "480ft",
+            "obstructions": "Minimal (clear median view)"
+          },
+          "night": {
+            "distance": "400ft",
+            "illumination": "High (park-side street lighting + LED)"
+          },
+          "viewingAngles": [30, 60, 90, 120, 150, 180]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/birdvalley0.jpeg",
+          "/logos/birdvalley1.jpeg",
+          "/logos/birdvalley2.jpeg",
+          "/logos/birdvalley3.jpeg"
+        ],
+        "panorama": "/logos/birdvalley2.jpeg"
+      },
+      "insight": "Strategically placed near the Bird Valley Garden entrance, this high-impact board captures attention from local families, morning joggers, and commuters heading toward Spine Road, Chinchwad, and Nigdi. With a steady flow of both vehicular and foot traffic, it offers premium visibility ideal for lifestyle, food, education, and real estate advertisers."
     }
+                
+    
   ]
 }

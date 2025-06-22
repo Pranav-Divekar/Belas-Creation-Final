@@ -1,10 +1,10 @@
 {
   "serviceInfo": {
-    "title": "EV Cycle Mobile Advertising",
+    "title": "EV & Tricycle Cycle Advertising",
     "subtitle": "Advertisement that moves with you",
     "description": "Transform your advertising strategy with our innovative electric cycles equipped with high-impact digital displays, covering prime urban locations with precision and style.",
     "videoUrl": "/videos/ev-service-demo.mp4",
-    "heroImage": "/images/ev-cycle-hero.jpg"
+    "heroImage":  "/logos/ev1.jpeg"
   },
   "features": [
     {
@@ -12,7 +12,7 @@
       "title": "Customizable Routes",
       "description": "Design your perfect advertising route through high-traffic areas, business districts, and target demographics with our advanced mapping system.",
       "icon": "route",
-      "image": "/images/features/custom-routes.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "GPS-tracked route optimization",
         "Real-time route adjustments",
@@ -25,7 +25,7 @@
       "title": "Daily Operations",
       "description": "Consistent daily coverage with 8-12 hour operational cycles, ensuring maximum brand exposure throughout the day.",
       "icon": "clock",
-      "image": "/images/features/daily-operations.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "12+ hours daily operation",
         "Weather-resistant displays",
@@ -38,7 +38,7 @@
       "title": "Prime Locations",
       "description": "Strategic coverage of business districts, shopping centers, universities, and high-footfall areas with intelligent route planning.",
       "icon": "location",
-      "image": "/images/features/prime-locations.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "CBD coverage",
         "Shopping mall circuits",
@@ -51,7 +51,7 @@
       "title": "Smart Technology",
       "description": "Advanced electric mobility solution with cutting-edge technology for seamless advertising campaigns.",
       "icon": "zap",
-      "image": "/images/features/smart-technology.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "Electric powered efficiency",
         "Smart route optimization",
@@ -64,7 +64,7 @@
       "title": "Digital Display Technology",
       "description": "High-resolution LED displays with dynamic content capabilities and weather protection for maximum visibility.",
       "icon": "monitor",
-      "image": "/images/features/digital-displays.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "4K LED displays",
         "Dynamic content updates",
@@ -77,7 +77,7 @@
       "title": "Analytics & Reporting",
       "description": "Comprehensive tracking and analytics to measure campaign effectiveness and optimize your advertising ROI.",
       "icon": "analytics",
-      "image": "/images/features/analytics.jpg",
+      "image": "/logos/ev1.jpeg",
       "benefits": [
         "Real-time GPS tracking",
         "Impression analytics",
@@ -94,7 +94,7 @@
       "coverage": "95%",
       "dailyReach": 250000,
       "activeCycles": 25,
-      "image": "/images/cities/new-york.jpg"
+      "image": "/logos/ev1.jpeg"
     },
     {
       "id": 2,
@@ -103,7 +103,7 @@
       "coverage": "90%",
       "dailyReach": 180000,
       "activeCycles": 20,
-      "image": "/images/cities/los-angeles.jpg"
+      "image": "/logos/ev1.jpeg"
     },
     {
       "id": 3,
@@ -112,7 +112,7 @@
       "coverage": "85%",
       "dailyReach": 150000,
       "activeCycles": 15,
-      "image": "/images/cities/chicago.jpg"
+      "image": "/logos/ev1.jpeg"
     }
   ],
   "pricingTiers": [
@@ -173,7 +173,7 @@
       "role": "Marketing Director",
       "content": "The EV cycle advertising campaign exceeded our expectations. We saw a 40% increase in brand awareness in just two weeks.",
       "rating": 5,
-      "avatar": "/images/testimonials/sarah-johnson.jpg"
+      "avatar": "/logos/ev1.jpeg"
     },
     {
       "id": 2,
@@ -182,32 +182,32 @@
       "role": "Brand Manager",
       "content": "Perfect solution for reaching our target audience. The mobile advertising approach delivered exceptional results.",
       "rating": 5,
-      "avatar": "/images/testimonials/michael-chen.jpg"
+      "avatar": "/logos/ev1.jpeg"
     }
   ],
   "gallery": [
     {
       "id": 1,
       "title": "EV Cycle in Times Square",
-      "image": "/images/gallery/times-square.jpg",
+      "image": "/logos/ev1.jpeg",
       "description": "Our mobile billboard in action at Times Square"
     },
     {
       "id": 2,
       "title": "Digital Display Technology",
-      "image": "/images/gallery/digital-display.jpg",
+      "image": "/logos/ev1.jpeg",
       "description": "High-resolution LED displays with dynamic content"
     },
     {
       "id": 3,
       "title": "Route Planning Interface",
-      "image": "/images/gallery/route-planning.jpg",
+      "image": "/logos/ev1.jpeg",
       "description": "Advanced mapping and route optimization"
     },
     {
       "id": 4,
       "title": "City Coverage",
-      "image": "/images/gallery/city-coverage.jpg",
+      "image": "/logos/ev1.jpeg",
       "description": "Comprehensive urban area coverage"
     }
   ]

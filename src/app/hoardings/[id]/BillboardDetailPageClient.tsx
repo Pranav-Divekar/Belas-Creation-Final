@@ -2088,7 +2088,7 @@ export default function BillboardDetailPageClient({ params, board }: BillboardDe
                     Street View
                   </a>
                 </div>
-                <a
+                {/* <a
                   href={`https://www.google.com/maps/@${board.location.lat},${board.location.lng},3a,75y,90t/data=!3m6!1e1!3m4!1s0x0:0x0!2e0!7i13312!8i6656`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -2096,7 +2096,7 @@ export default function BillboardDetailPageClient({ params, board }: BillboardDe
                 >
                   <Globe className="w-4 h-4" />
                   360° View
-                </a>
+                </a> */}
               </div>
             </div>
 
@@ -2261,7 +2261,7 @@ export default function BillboardDetailPageClient({ params, board }: BillboardDe
                             name="Impressions"
                             animationDuration={1500}
                           />
-                          <Line
+                          {/* <Line
                             type="monotone"
                             dataKey="engagement"
                             stroke="#ec4899"
@@ -2269,7 +2269,7 @@ export default function BillboardDetailPageClient({ params, board }: BillboardDe
                             dot={{ fill: "#ec4899", strokeWidth: 2, r: 4 }}
                             name="Engagement (%)"
                             animationDuration={1500}
-                          />
+                          /> */}
                         </LineChart>
                       </ResponsiveContainer>
                     </div>
@@ -2352,30 +2352,30 @@ export default function BillboardDetailPageClient({ params, board }: BillboardDe
                       icon: Monitor,
                       color: "bg-green-50 border-green-200",
                     },
-                    {
-                      label: "Elevation",
-                      value: board.specs.elevation,
-                      icon: Move3D,
-                      color: "bg-yellow-50 border-yellow-200",
-                    },
+                    // {
+                    //   label: "Elevation",
+                    //   value: board.specs.elevation,
+                    //   icon: Move3D,
+                    //   color: "bg-yellow-50 border-yellow-200",
+                    // },
                     {
                       label: "Lighting",
                       value: board.specs.lighting,
                       icon: Lightbulb,
                       color: "bg-purple-50 border-purple-200",
                     },
-                    {
-                      label: "Rotation",
-                      value: board.specs.rotationInterval,
-                      icon: RotateCw,
-                      color: "bg-pink-50 border-pink-200",
-                    },
-                    {
-                      label: "Orientation",
-                      value: board.specs.orientation,
-                      icon: Compass,
-                      color: "bg-indigo-50 border-indigo-200",
-                    },
+                    // {
+                    //   label: "Rotation",
+                    //   value: board.specs.rotationInterval,
+                    //   icon: RotateCw,
+                    //   color: "bg-pink-50 border-pink-200",
+                    // },
+                    // {
+                    //   label: "Orientation",
+                    //   value: board.specs.orientation,
+                    //   icon: Compass,
+                    //   color: "bg-indigo-50 border-indigo-200",
+                    // },
                   ].map((spec, index) => (
                     <div
                       key={index}
