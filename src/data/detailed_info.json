@@ -315,6 +315,7 @@
       },
       "media": {
         "images": [
+          "/logos/appghar0.jpeg",
          "/logos/appghar1.jpeg",
          "/logos/appgha2.jpeg",
          "/logos/appghar3.jpeg"
@@ -368,6 +369,7 @@
       },
       "media": {
         "images": [
+          "/logos/bhaktishakti0.jpeg",
           "/logos/bhaktishakti1.jpeg",
           "/logos/bhaktishakti2.jpeg",
           "/logos/bhaktishakti3.jpeg"
@@ -376,6 +378,7 @@
       },
       "insight": "This board is placed at one of the highest footfall locations in Nigdi—Bhakti Shakti Bus Stop. With constant flow from city buses, express routes, and nearby students from PCCOE and DY Patil, this site ensures maximum exposure throughout the day. Ideal for transit advertising targeting mass urban audiences."
     },
+    
     {
       "id": 8,
       "name": "Bird Valley Garden - Spine Road",
@@ -428,7 +431,135 @@
         "panorama": "/logos/birdvalley2.jpeg"
       },
       "insight": "Strategically placed near the Bird Valley Garden entrance, this high-impact board captures attention from local families, morning joggers, and commuters heading toward Spine Road, Chinchwad, and Nigdi. With a steady flow of both vehicular and foot traffic, it offers premium visibility ideal for lifestyle, food, education, and real estate advertisers."
+    },
+
+    {
+      "id": 9,
+      "name": "Jyotiba Garden - Empire Estate, Kalewadi",
+      "slug": "jyotiba-garden-empire-estate-kalewadi",
+      "image": "/logos/jyotiba1.jpeg",
+      "description": "Prime hoarding location near Jyotiba Garden adjacent to Empire Estate township in Kalewadi, a fast-developing area within the PCMC limits. Surrounded by one of the largest gated societies with over 2000 flats and 8000+ residents, the area is a favored destination for families, children, and senior citizens. Excellent visibility and engagement potential due to consistent local footfall and proximity to major roads and residential zones.",
+      "city": "Pimpri-Chinchwad, MH",
+      "numberOfBoards": 2,
+      "featured": true,
+      "dailyTraffic": 54000,
+      "priceRange": "$2K-4.5K",
+      "primaryType": "LED",
+      "tags": ["Gated Community", "Garden Visitors", "Families & Seniors", "Rapid Growth Zone"],
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "Kalewadi",
+        "address": "Jyotiba Garden, Near Empire Estate Township, Kalewadi, Pune 411017",
+        "lat": 18.612233,
+        "lng": 73.784794,
+        "streetViewUrl": "https://www.google.com/maps/@18.612233,73.784794,3a,75y,180h,90t/data=!3m6!1e1!3m4!1s1Gz4S3B9KvqPbOaXlPZciA!2e0!7i16384!8i8192"
+      },
+      "specs": {
+        "size": "20ft x 30ft",
+        "type": "LED Board",
+        "elevation": "36ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing North-West toward Empire Estate Entry"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 54000,
+          "weekly": 378000,
+          "peakHours": ["6:30 AM", "7:30 PM"]
+        },
+        "impressions": {
+          "daily": 145000,
+          "monthly": 4350000,
+          "cpm": 4.2
+        },
+        "visibility": {
+          "day": {
+            "distance": "420ft",
+            "obstructions": "None (wide entrance road, clear visual)"
+          },
+          "night": {
+            "distance": "380ft",
+            "illumination": "Moderate to High (residential and park lighting + LED)"
+          },
+          "viewingAngles": [45, 90, 135, 160]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/jyotiba1.jpeg",
+          "/logos/jyotiba2.jpeg",
+          "/logos/jyotiba3.jpeg"
+        ],
+        "panorama": "/logos/jyotiba2.jpeg"
+      },
+      "insight": "Located at the core of Kalewadi’s residential landscape, this hoarding site benefits from steady footfall from the adjacent Empire Estate society and garden visitors. Ideal for healthcare, FMCG, educational, and real estate branding, the site offers extended dwell time, high residential recall value, and consistent exposure across key audience segments."
+    },
+
+    {
+      "id": 10,
+      "name": "BRT Road - Ravet to Bhosari",
+      "slug": "brt-road-ravet-bhosari",
+      "image": "/logos/brt0.jpeg",
+      "description": "Strategically positioned along the Bus Rapid Transit (BRT) corridor connecting Ravet and Bhosari, this hoarding location taps into one of PCMC’s busiest arterial routes. Ideal for capturing the attention of daily commuters, especially professionals traveling between the industrial hubs of Bhosari MIDC, Tata Motors, and Talwade IT Park, and the residential zones of Ravet, Nigdi, and Talwade. Offers exceptional visibility and sustained footfall throughout the day.",
+      "city": "Pimpri-Chinchwad, MH",
+      "numberOfBoards": 3,
+      "featured": true,
+      "dailyTraffic": 98000,
+      "priceRange": "$2.8K-6.5K",
+      "primaryType": "LED",
+      "tags": ["Commuter Belt", "Industrial Access", "IT Park Travelers", "BRT Corridor"],
+      "location": {
+        "city": "Pimpri-Chinchwad, MH",
+        "area": "BRT Corridor, Ravet-Bhosari",
+        "address": "BRT Road, Near Nashik Phata Junction, Ravet to Bhosari Corridor, Pune 411026",
+        "lat": 18.633954,
+        "lng": 73.822245,
+        "streetViewUrl": "https://www.google.com/maps/@18.633954,73.822245,3a,75y,180h,90t/data=!3m6!1e1!3m4!1sMK8Aqk6b6PSvGH3nUeNJxg!2e0!7i13312!8i6656"
+      },
+      "specs": {
+        "size": "20ft x 40ft",
+        "type": "LED Board",
+        "elevation": "40ft",
+        "lighting": "Yes",
+        "rotationInterval": "Static",
+        "orientation": "Facing East toward Bhosari MIDC traffic"
+      },
+      "metrics": {
+        "footfall": {
+          "daily": 98000,
+          "weekly": 686000,
+          "peakHours": ["8:00 AM", "7:00 PM"]
+        },
+        "impressions": {
+          "daily": 260000,
+          "monthly": 7800000,
+          "cpm": 4.9
+        },
+        "visibility": {
+          "day": {
+            "distance": "500ft",
+            "obstructions": "Minimal (wide median, open corridor)"
+          },
+          "night": {
+            "distance": "440ft",
+            "illumination": "High (BRT lighting + pole LED)"
+          },
+          "viewingAngles": [60, 90, 120, 150, 180]
+        }
+      },
+      "media": {
+        "images": [
+          "/logos/brt0.jpeg",
+          "/logos/brt1.jpeg",
+          "/logos/brt3.jpeg"
+        ],
+        "panorama": "/logos/brt1.jpeg"
+      },
+      "insight": "Situated on a critical transit corridor, this location ensures high retention among professionals, workers, and daily commuters. Its strategic reach into industrial and residential sectors makes it ideal for automobile, manufacturing, finance, and tech-based advertisements. Long exposure durations during peak BRT congestion further amplify brand impact."
     }
+    
+    
                 
     
   ]

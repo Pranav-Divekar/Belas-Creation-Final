@@ -34,7 +34,7 @@
       "id": 3,
       "name": "Jagtap Dairy Chowk - 1",
       "slug": "jagtap-dairy-chowk",
-      "image": "/logos/JagtapDairy1.JPG",
+      "image": "/logos/jagtap1-0.JPEG",
       "description": "Prime advertising spot at Jagtap Dairy Chowk (After flyover), located just after the flyover connecting Aundh, Wakad, and Hinjawadi IT Park. This high-traffic junction is frequented by daily commuters, tech professionals, and students from institutes like Balaji Institute of Modern Management, JSPM Tathawade, and Indira College. Excellent visibility with heavy vehicular flow throughout the day.",
       "city": "Pimpri-Chinchwad, MH",
       "numberOfBoards": 2,
@@ -49,7 +49,7 @@
       "id": 4,
       "name": "Jagtap Dairy Chowk- 2",
       "slug": "jagtap-dairy-before-flyover",
-      "image": "/logos/jagtap1-1.JPG",
+      "image": "/logos/jagtapdairy2.JPG",
       "description": "Premium visibility advertising location at Jagtap Dairy (Kalewadi Phata side), positioned just before the flyover that connects to Wakad and Hinjawadi. Surrounded by high-density residential zones and educational hubs like JSPM RSCOE and DY Patil Akurdi, it ensures round-the-clock traffic from office-goers, college students, and local commuters.",
       "city": "Pimpri-Chinchwad, MH",
       "numberOfBoards": 3,
@@ -79,7 +79,7 @@
       "id": 6,
       "name": "Appughar & Durga Tekdi Parking",
       "slug": "appughar-durga-tekdi",
-      "image": "/logos/appghar1.jpeg",
+      "image": "/logos/appghar0.jpeg",
       "description": "Strategic advertising location near Appughar and Durga Tekdi, a scenic and high-traffic area connecting Nigdi, Pradhikaran, and Akurdi. This road segment sees steady movement of tourists, morning joggers, and daily commuters. Close to Bhakti Shakti Chowk, D. Y. Patil College, and Indira College, it offers exceptional visibility for both vehicular and pedestrian impressions.",
       "city": "Pimpri-Chinchwad, MH",
       "numberOfBoards": 2,
@@ -93,7 +93,7 @@
       "id": 7,
       "name": "Bhakti Shakti Bus Stop",
       "slug": "bhakti-shakti-bus-stop",
-      "image": "/logos/bhaktishakti1.jpeg",
+      "image": "/logos/bhaktishakti0.jpeg",
       "description": "High-impact LED advertising site located at Bhakti Shakti Bus Stop, a central transit hub in Nigdi Pradhikaran. The area witnesses a massive flow of public transport users, daily commuters, and students. Surrounded by key institutions like PCCOE, D. Y. Patil Akurdi, and close proximity to Durga Tekdi and Nigdi market, this location guarantees all-day visibility and consistent engagement.",
       "city": "Pimpri-Chinchwad, MH",
       "numberOfBoards": 2,
@@ -104,10 +104,10 @@
       "tags": ["Transit Hub", "College Crowd", "Retail Zone"]
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Bird Valley Garden - Spine Road",
       "slug": "bird-valley-spine-road",
-      "image": "/logos/birdvalley0.jpeg",
+      "image": "/logos/birdvalley2.jpeg",
       "description": "High-visibility advertising location near Bird Valley Garden on Spine Road, a prominent spot in PCMC. This area is frequented by families, fitness enthusiasts, and daily commuters heading towards Bhosari, Nigdi, and Chinchwad. Surrounded by residential colonies, parks, and shopping hubs, it offers excellent engagement opportunities across diverse demographics.",
       "city": "Pimpri-Chinchwad, MH",
       "numberOfBoards": 4,
@@ -116,9 +116,37 @@
       "priceRange": "$2.5K-6K",
       "primaryType": "LED",
       "tags": ["Residential Hub", "Park Visitors", "Daily Commuters", "Tourist Spot"]
+    },
+
+    {
+      "id": 9,
+      "name": "Jyotiba Garden - Empire Estate, Kalewadi",
+      "slug": "jyotiba-garden-empire-estate-kalewadi",
+      "image": "/logos/jyotiba1.jpeg",
+      "description": "Prime hoarding location near Jyotiba Garden adjacent to Empire Estate township in Kalewadi, a fast-developing area within the PCMC limits. Surrounded by one of the largest gated societies with over 2000 flats and 8000+ residents, the area is a favored destination for families, children, and senior citizens. Excellent visibility and engagement potential due to consistent local footfall and proximity to major roads and residential zones.",
+      "city": "Pimpri-Chinchwad, MH",
+      "numberOfBoards": 2,
+      "featured": true,
+      "dailyTraffic": 54000,
+      "priceRange": "$2K-4.5K",
+      "primaryType": "LED",
+      "tags": ["Gated Community", "Garden Visitors", "Families & Seniors", "Rapid Growth Zone"]
+    },
+
+    {
+      "id": 10,
+      "name": "BRT Road - Ravet to Bhosari",
+      "slug": "brt-road-ravet-bhosari",
+      "image": "/logos/brt0.jpeg",
+      "description": "Strategically positioned along the Bus Rapid Transit (BRT) corridor connecting Ravet and Bhosari, this hoarding location taps into one of PCMC’s busiest arterial routes. Ideal for capturing the attention of daily commuters, especially professionals traveling between the industrial hubs of Bhosari MIDC, Tata Motors, and Talwade IT Park, and the residential zones of Ravet, Nigdi, and Talwade. Offers exceptional visibility and sustained footfall throughout the day.",
+      "city": "Pimpri-Chinchwad, MH",
+      "numberOfBoards": 3,
+      "featured": true,
+      "dailyTraffic": 98000,
+      "priceRange": "$2.8K-6.5K",
+      "primaryType": "LED",
+      "tags": ["Commuter Belt", "Industrial Access", "IT Park Travelers", "BRT Corridor"]
     }
-    
-    
     
   ]
 }

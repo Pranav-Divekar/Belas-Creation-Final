@@ -1051,20 +1051,30 @@ const serviceData = {
     subtitle: "Eco-friendly mobile advertising that reaches your audience",
     description:
       "Our electric cycle advertising platform combines sustainability with high visibility, delivering your message across urban areas with maximum impact.",
-    videoUrl: "https://example.com/videos/demo.mp4",
-    heroImage: "/logos/ev1.jpeg",
+    videoUrl:  "/logos/EV_Video.mp4",
+    heroImage: "/logos/evc0.jpeg",
     galleryImages: [
-      "/logos/ev1.jpeg",
-      "/logos/tri1.jpeg",
-      "/logos/tri2.jpeg",
-      "/logos/tri3.jpeg",
-      "/logos/tri4.jpeg",
-      "/logos/tri5.jpeg",
-      "/logos/tri6.jpeg",
-      "/logos/tri7.jpeg",
-      "/logos/tri8.jpeg",
-      "/logos/tri9.jpeg",
-      "/logos/ev1.jpeg",
+      "/logos/evc1.jpeg",
+      "/logos/evc2.jpeg",
+      "/logos/evc3.jpeg",
+      "/logos/evc4.jpeg",
+      "/logos/evc5.jpeg",
+      "/logos/evc6.jpeg",
+      "/logos/evc7.jpeg",
+      "/logos/evc8.jpeg",
+      "/logos/tric0.jpeg",
+      "/logos/tric1.jpeg",
+      "/logos/tric2.jpeg",
+      "/logos/tric3.jpeg",
+      "/logos/tric4.jpeg",
+      "/logos/tric5.jpeg",
+      "/logos/tric6.jpeg",
+      "/logos/tric7.jpeg",
+      "/logos/tric8.jpeg",
+      "/logos/tric9.jpeg",
+      "/logos/tric10.jpeg",
+      
+
     ],
   },
   statistics: {
@@ -1080,7 +1090,7 @@ const serviceData = {
       title: "Smart Routing",
       description: "AI-powered route optimization to maximize visibility in high-traffic areas.",
       icon: "route",
-      image: "/logos/tri1.jpeg",
+      image: "/logos/evc1.jpeg",
       benefits: ["Increased impressions", "Strategic coverage", "Time optimization"],
     },
     {
@@ -1088,7 +1098,7 @@ const serviceData = {
       title: "Real-time Tracking",
       description: "Monitor your campaign performance with our advanced tracking system.",
       icon: "monitor",
-      image: "/logos/ev1.jpeg",
+      image: "/logos/evc2.jpeg",
       benefits: ["Live location updates", "Performance analytics", "Coverage reports"],
     },
     {
@@ -1096,7 +1106,7 @@ const serviceData = {
       title: "Green Advertising",
       description: "Eco-friendly advertising solution with zero carbon emissions.",
       icon: "zap",
-      image: "/logos/tri5.jpeg",
+      image: "/logos/evc5.jpeg",
       benefits: ["Carbon neutral", "Sustainability reporting", "Green brand image"],
     },
   ],
@@ -1105,19 +1115,19 @@ const serviceData = {
       id: "gallery1",
       title: "Downtown Campaign",
       description: "High visibility advertising in the business district",
-      image: "/logos/ev1.jpeg",
+      image: "/logos/evc5.jpeg",
     },
     {
       id: "gallery2",
       title: "Festival Promotion",
       description: "Special event coverage with targeted routes",
-      image: "/logos/tri6.jpeg",
+      image: "/logos/evc2.jpeg",
     },
     {
       id: "gallery3",
       title: "University Outreach",
       description: "Connecting with the student demographic",
-      image: "/logos/tri7.jpeg",
+      image: "/logos/tric6.jpeg",
     },
   ],
   serviceAreas: [
@@ -1568,17 +1578,7 @@ export default function EVCyclePage() {
             </div>
 
             {/* Enhanced CTA Button */}
-            <div className="flex justify-center">
-              <button className="relative overflow-hidden group bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-12 py-5 rounded-full font-bold text-xl transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/30">
-                {/* Animated shine effect */}
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-                {/* Button content */}
-                <div className="relative flex items-center gap-3">
-                  <Zap className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                  <span className="group-hover:tracking-wider transition-all duration-300">Start Your Campaign</span>
-                </div>
-              </button>
-            </div>
+            
           </div>
         </section>
 
