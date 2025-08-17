@@ -155,10 +155,10 @@
       },
       "media": {
         "images": [
-         "/logos/JagtapDairy1.JPG",
-         "/logos/JagtapDairy2.JPG",
-         "/logos/JagtapDairy3.JPG",
-         "/logos/JagtapDairy4.JPG"
+         "/logos/jagtap1_0.JPEG",
+         "/logos/jagtap1_1.JPG",
+         "/logos/jagtap1_2.JPG",
+         "/logos/jagtap1_3.JPG"
         ],
         "panorama": "/logos/JagtapDairy1.JPG"
       },
@@ -208,11 +208,12 @@
       },
       "media": {
         "images": [
-         "/logos/jagtap1-1.JPG",
-         "/logos/jagtap1-2.JPG",
-         "/logos/jagtap1-3.JPG"
+         "/logos/JagtapDairy1.JPG",
+         "/logos/JagtapDairy2.JPG",
+         "/logos/JagtapDairy3.JPG",
+         "/logos/JagtapDairy4.JPG"
         ],
-        "panorama": "/logos/belas.png"
+        "panorama":"/logos/JagtapDairy4.JPG"
       },
       "insight": "Perfectly placed before the Jagtap Dairy flyover, this board captures audiences traveling from Kalewadi and Pimple Saudagar towards Wakad and Hinjawadi. Close to JSPM RSCOE and DY Patil Akurdi, the site consistently reaches office-goers, college students, and families in residential zones."
     },
