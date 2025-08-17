@@ -155,12 +155,12 @@
       },
       "media": {
         "images": [
-         "/logos/jagtap1_0.JPEG",
+         "/logos/jagtap1_0.jpeg",
          "/logos/jagtap1_1.JPG",
          "/logos/jagtap1_2.JPG",
          "/logos/jagtap1_3.JPG"
         ],
-        "panorama": "/logos/JagtapDairy1.JPG"
+        "panorama":  "/logos/jagtap1_0.jpeg"
       },
       "insight": "Located at one of the busiest points connecting Aundh, Wakad, and Hinjawadi, this Board board at Jagtap Dairy Chowk offers unmatched visibility to IT professionals, college students, and local residents. With its elevated height and strategic orientation, the board captures high-speed vehicular traffic exiting the flyover. Surrounded by key institutions like Balaji Institute, JSPM Tathawade, and Indira College, the spot is ideal for campaigns targeting urban youth and professionals."
     },    
